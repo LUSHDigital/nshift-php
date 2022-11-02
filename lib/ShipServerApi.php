@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  LUSHDigital\NShiftPHP
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace LUSHDigital\NShiftPHP\;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use LUSHDigital\NShiftPHP\ApiException;
+use LUSHDigital\NShiftPHP\Configuration;
+use LUSHDigital\NShiftPHP\HeaderSelector;
+use LUSHDigital\NShiftPHP\ObjectSerializer;
 
 /**
  * ShipServerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  LUSHDigital\NShiftPHP
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,23 +91,23 @@ class ShipServerApi
      *
      * Get Products for actor
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  bool $include_carriers Include Carriers in response (optional, default to true)
-     * @param  bool $include_sub_carriers Include SubCarriers in response (optional, default to false)
-     * @param  bool $include_products Include Products in response (optional, default to true)
-     * @param  bool $include_icons Include Carrier Icons in response, (optional, default to false)
-     * @param  bool $include_services Include Services in response, (optional, default to true)
-     * @param  bool $include_goods_types Include Goods Types in response, (optional, default to true)
-     * @param  bool $include_validations Include validation rules for products in response (optional, default to false)
-     * @param  int $carrier_concep_id Return data only for carrier with this concept ID (optional, default to 0)
+     * @param  int $actorID Actor ID (required)
+     * @param  bool $includeCarriers Include Carriers in response (optional, default to true)
+     * @param  bool $includeSubCarriers Include SubCarriers in response (optional, default to false)
+     * @param  bool $includeProducts Include Products in response (optional, default to true)
+     * @param  bool $includeIcons Include Carrier Icons in response, (optional, default to false)
+     * @param  bool $includeServices Include Services in response, (optional, default to true)
+     * @param  bool $includeGoodsTypes Include Goods Types in response, (optional, default to true)
+     * @param  bool $includeValidations Include validation rules for products in response (optional, default to false)
+     * @param  int $carrierConcepID Return data only for carrier with this concept ID (optional, default to 0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDAvailableServicesGet($actor_id, $include_carriers = 'true', $include_sub_carriers = 'false', $include_products = 'true', $include_icons = 'false', $include_services = 'true', $include_goods_types = 'true', $include_validations = 'false', $carrier_concep_id = '0')
+    public function shipServerActorIDAvailableServicesGet($actorID, $includeCarriers = 'true', $includeSubCarriers = 'false', $includeProducts = 'true', $includeIcons = 'false', $includeServices = 'true', $includeGoodsTypes = 'true', $includeValidations = 'false', $carrierConcepID = '0')
     {
-        $this->shipServerActorIDAvailableServicesGetWithHttpInfo($actor_id, $include_carriers, $include_sub_carriers, $include_products, $include_icons, $include_services, $include_goods_types, $include_validations, $carrier_concep_id);
+        $this->shipServerActorIDAvailableServicesGetWithHttpInfo($actorID, $includeCarriers, $includeSubCarriers, $includeProducts, $includeIcons, $includeServices, $includeGoodsTypes, $includeValidations, $carrierConcepID);
     }
 
     /**
@@ -115,24 +115,24 @@ class ShipServerApi
      *
      * Get Products for actor
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  bool $include_carriers Include Carriers in response (optional, default to true)
-     * @param  bool $include_sub_carriers Include SubCarriers in response (optional, default to false)
-     * @param  bool $include_products Include Products in response (optional, default to true)
-     * @param  bool $include_icons Include Carrier Icons in response, (optional, default to false)
-     * @param  bool $include_services Include Services in response, (optional, default to true)
-     * @param  bool $include_goods_types Include Goods Types in response, (optional, default to true)
-     * @param  bool $include_validations Include validation rules for products in response (optional, default to false)
-     * @param  int $carrier_concep_id Return data only for carrier with this concept ID (optional, default to 0)
+     * @param  int $actorID Actor ID (required)
+     * @param  bool $includeCarriers Include Carriers in response (optional, default to true)
+     * @param  bool $includeSubCarriers Include SubCarriers in response (optional, default to false)
+     * @param  bool $includeProducts Include Products in response (optional, default to true)
+     * @param  bool $includeIcons Include Carrier Icons in response, (optional, default to false)
+     * @param  bool $includeServices Include Services in response, (optional, default to true)
+     * @param  bool $includeGoodsTypes Include Goods Types in response, (optional, default to true)
+     * @param  bool $includeValidations Include validation rules for products in response (optional, default to false)
+     * @param  int $carrierConcepID Return data only for carrier with this concept ID (optional, default to 0)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDAvailableServicesGetWithHttpInfo($actor_id, $include_carriers = 'true', $include_sub_carriers = 'false', $include_products = 'true', $include_icons = 'false', $include_services = 'true', $include_goods_types = 'true', $include_validations = 'false', $carrier_concep_id = '0')
+    public function shipServerActorIDAvailableServicesGetWithHttpInfo($actorID, $includeCarriers = 'true', $includeSubCarriers = 'false', $includeProducts = 'true', $includeIcons = 'false', $includeServices = 'true', $includeGoodsTypes = 'true', $includeValidations = 'false', $carrierConcepID = '0')
     {
         $returnType = '';
-        $request = $this->shipServerActorIDAvailableServicesGetRequest($actor_id, $include_carriers, $include_sub_carriers, $include_products, $include_icons, $include_services, $include_goods_types, $include_validations, $carrier_concep_id);
+        $request = $this->shipServerActorIDAvailableServicesGetRequest($actorID, $includeCarriers, $includeSubCarriers, $includeProducts, $includeIcons, $includeServices, $includeGoodsTypes, $includeValidations, $carrierConcepID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -176,22 +176,22 @@ class ShipServerApi
      *
      * Get Products for actor
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  bool $include_carriers Include Carriers in response (optional, default to true)
-     * @param  bool $include_sub_carriers Include SubCarriers in response (optional, default to false)
-     * @param  bool $include_products Include Products in response (optional, default to true)
-     * @param  bool $include_icons Include Carrier Icons in response, (optional, default to false)
-     * @param  bool $include_services Include Services in response, (optional, default to true)
-     * @param  bool $include_goods_types Include Goods Types in response, (optional, default to true)
-     * @param  bool $include_validations Include validation rules for products in response (optional, default to false)
-     * @param  int $carrier_concep_id Return data only for carrier with this concept ID (optional, default to 0)
+     * @param  int $actorID Actor ID (required)
+     * @param  bool $includeCarriers Include Carriers in response (optional, default to true)
+     * @param  bool $includeSubCarriers Include SubCarriers in response (optional, default to false)
+     * @param  bool $includeProducts Include Products in response (optional, default to true)
+     * @param  bool $includeIcons Include Carrier Icons in response, (optional, default to false)
+     * @param  bool $includeServices Include Services in response, (optional, default to true)
+     * @param  bool $includeGoodsTypes Include Goods Types in response, (optional, default to true)
+     * @param  bool $includeValidations Include validation rules for products in response (optional, default to false)
+     * @param  int $carrierConcepID Return data only for carrier with this concept ID (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDAvailableServicesGetAsync($actor_id, $include_carriers = 'true', $include_sub_carriers = 'false', $include_products = 'true', $include_icons = 'false', $include_services = 'true', $include_goods_types = 'true', $include_validations = 'false', $carrier_concep_id = '0')
+    public function shipServerActorIDAvailableServicesGetAsync($actorID, $includeCarriers = 'true', $includeSubCarriers = 'false', $includeProducts = 'true', $includeIcons = 'false', $includeServices = 'true', $includeGoodsTypes = 'true', $includeValidations = 'false', $carrierConcepID = '0')
     {
-        return $this->shipServerActorIDAvailableServicesGetAsyncWithHttpInfo($actor_id, $include_carriers, $include_sub_carriers, $include_products, $include_icons, $include_services, $include_goods_types, $include_validations, $carrier_concep_id)
+        return $this->shipServerActorIDAvailableServicesGetAsyncWithHttpInfo($actorID, $includeCarriers, $includeSubCarriers, $includeProducts, $includeIcons, $includeServices, $includeGoodsTypes, $includeValidations, $carrierConcepID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -204,23 +204,23 @@ class ShipServerApi
      *
      * Get Products for actor
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  bool $include_carriers Include Carriers in response (optional, default to true)
-     * @param  bool $include_sub_carriers Include SubCarriers in response (optional, default to false)
-     * @param  bool $include_products Include Products in response (optional, default to true)
-     * @param  bool $include_icons Include Carrier Icons in response, (optional, default to false)
-     * @param  bool $include_services Include Services in response, (optional, default to true)
-     * @param  bool $include_goods_types Include Goods Types in response, (optional, default to true)
-     * @param  bool $include_validations Include validation rules for products in response (optional, default to false)
-     * @param  int $carrier_concep_id Return data only for carrier with this concept ID (optional, default to 0)
+     * @param  int $actorID Actor ID (required)
+     * @param  bool $includeCarriers Include Carriers in response (optional, default to true)
+     * @param  bool $includeSubCarriers Include SubCarriers in response (optional, default to false)
+     * @param  bool $includeProducts Include Products in response (optional, default to true)
+     * @param  bool $includeIcons Include Carrier Icons in response, (optional, default to false)
+     * @param  bool $includeServices Include Services in response, (optional, default to true)
+     * @param  bool $includeGoodsTypes Include Goods Types in response, (optional, default to true)
+     * @param  bool $includeValidations Include validation rules for products in response (optional, default to false)
+     * @param  int $carrierConcepID Return data only for carrier with this concept ID (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDAvailableServicesGetAsyncWithHttpInfo($actor_id, $include_carriers = 'true', $include_sub_carriers = 'false', $include_products = 'true', $include_icons = 'false', $include_services = 'true', $include_goods_types = 'true', $include_validations = 'false', $carrier_concep_id = '0')
+    public function shipServerActorIDAvailableServicesGetAsyncWithHttpInfo($actorID, $includeCarriers = 'true', $includeSubCarriers = 'false', $includeProducts = 'true', $includeIcons = 'false', $includeServices = 'true', $includeGoodsTypes = 'true', $includeValidations = 'false', $carrierConcepID = '0')
     {
         $returnType = '';
-        $request = $this->shipServerActorIDAvailableServicesGetRequest($actor_id, $include_carriers, $include_sub_carriers, $include_products, $include_icons, $include_services, $include_goods_types, $include_validations, $carrier_concep_id);
+        $request = $this->shipServerActorIDAvailableServicesGetRequest($actorID, $includeCarriers, $includeSubCarriers, $includeProducts, $includeIcons, $includeServices, $includeGoodsTypes, $includeValidations, $carrierConcepID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -248,25 +248,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDAvailableServicesGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  bool $include_carriers Include Carriers in response (optional, default to true)
-     * @param  bool $include_sub_carriers Include SubCarriers in response (optional, default to false)
-     * @param  bool $include_products Include Products in response (optional, default to true)
-     * @param  bool $include_icons Include Carrier Icons in response, (optional, default to false)
-     * @param  bool $include_services Include Services in response, (optional, default to true)
-     * @param  bool $include_goods_types Include Goods Types in response, (optional, default to true)
-     * @param  bool $include_validations Include validation rules for products in response (optional, default to false)
-     * @param  int $carrier_concep_id Return data only for carrier with this concept ID (optional, default to 0)
+     * @param  int $actorID Actor ID (required)
+     * @param  bool $includeCarriers Include Carriers in response (optional, default to true)
+     * @param  bool $includeSubCarriers Include SubCarriers in response (optional, default to false)
+     * @param  bool $includeProducts Include Products in response (optional, default to true)
+     * @param  bool $includeIcons Include Carrier Icons in response, (optional, default to false)
+     * @param  bool $includeServices Include Services in response, (optional, default to true)
+     * @param  bool $includeGoodsTypes Include Goods Types in response, (optional, default to true)
+     * @param  bool $includeValidations Include validation rules for products in response (optional, default to false)
+     * @param  int $carrierConcepID Return data only for carrier with this concept ID (optional, default to 0)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDAvailableServicesGetRequest($actor_id, $include_carriers = 'true', $include_sub_carriers = 'false', $include_products = 'true', $include_icons = 'false', $include_services = 'true', $include_goods_types = 'true', $include_validations = 'false', $carrier_concep_id = '0')
+    protected function shipServerActorIDAvailableServicesGetRequest($actorID, $includeCarriers = 'true', $includeSubCarriers = 'false', $includeProducts = 'true', $includeIcons = 'false', $includeServices = 'true', $includeGoodsTypes = 'true', $includeValidations = 'false', $carrierConcepID = '0')
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDAvailableServicesGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDAvailableServicesGet'
             );
         }
 
@@ -278,43 +278,43 @@ class ShipServerApi
         $multipart = false;
 
         // query params
-        if ($include_carriers !== null) {
-            $queryParams['includeCarriers'] = ObjectSerializer::toQueryValue($include_carriers, null);
+        if ($includeCarriers !== null) {
+            $queryParams['includeCarriers'] = ObjectSerializer::toQueryValue($includeCarriers, null);
         }
         // query params
-        if ($include_sub_carriers !== null) {
-            $queryParams['includeSubCarriers'] = ObjectSerializer::toQueryValue($include_sub_carriers, null);
+        if ($includeSubCarriers !== null) {
+            $queryParams['includeSubCarriers'] = ObjectSerializer::toQueryValue($includeSubCarriers, null);
         }
         // query params
-        if ($include_products !== null) {
-            $queryParams['includeProducts'] = ObjectSerializer::toQueryValue($include_products, null);
+        if ($includeProducts !== null) {
+            $queryParams['includeProducts'] = ObjectSerializer::toQueryValue($includeProducts, null);
         }
         // query params
-        if ($include_icons !== null) {
-            $queryParams['includeIcons'] = ObjectSerializer::toQueryValue($include_icons, null);
+        if ($includeIcons !== null) {
+            $queryParams['includeIcons'] = ObjectSerializer::toQueryValue($includeIcons, null);
         }
         // query params
-        if ($include_services !== null) {
-            $queryParams['includeServices'] = ObjectSerializer::toQueryValue($include_services, null);
+        if ($includeServices !== null) {
+            $queryParams['includeServices'] = ObjectSerializer::toQueryValue($includeServices, null);
         }
         // query params
-        if ($include_goods_types !== null) {
-            $queryParams['includeGoodsTypes'] = ObjectSerializer::toQueryValue($include_goods_types, null);
+        if ($includeGoodsTypes !== null) {
+            $queryParams['includeGoodsTypes'] = ObjectSerializer::toQueryValue($includeGoodsTypes, null);
         }
         // query params
-        if ($include_validations !== null) {
-            $queryParams['includeValidations'] = ObjectSerializer::toQueryValue($include_validations, null);
+        if ($includeValidations !== null) {
+            $queryParams['includeValidations'] = ObjectSerializer::toQueryValue($includeValidations, null);
         }
         // query params
-        if ($carrier_concep_id !== null) {
-            $queryParams['carrierConcepID'] = ObjectSerializer::toQueryValue($carrier_concep_id, 'int32');
+        if ($carrierConcepID !== null) {
+            $queryParams['carrierConcepID'] = ObjectSerializer::toQueryValue($carrierConcepID, 'int32');
         }
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -397,16 +397,16 @@ class ShipServerApi
      *
      * Get batch report
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_report_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchReportID Job ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDBatchReportsBatchReportIDGet($actor_id, $batch_report_id)
+    public function shipServerActorIDBatchReportsBatchReportIDGet($actorID, $batchReportID)
     {
-        $this->shipServerActorIDBatchReportsBatchReportIDGetWithHttpInfo($actor_id, $batch_report_id);
+        $this->shipServerActorIDBatchReportsBatchReportIDGetWithHttpInfo($actorID, $batchReportID);
     }
 
     /**
@@ -414,17 +414,17 @@ class ShipServerApi
      *
      * Get batch report
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_report_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchReportID Job ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDBatchReportsBatchReportIDGetWithHttpInfo($actor_id, $batch_report_id)
+    public function shipServerActorIDBatchReportsBatchReportIDGetWithHttpInfo($actorID, $batchReportID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchReportsBatchReportIDGetRequest($actor_id, $batch_report_id);
+        $request = $this->shipServerActorIDBatchReportsBatchReportIDGetRequest($actorID, $batchReportID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -468,15 +468,15 @@ class ShipServerApi
      *
      * Get batch report
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_report_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchReportID Job ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchReportsBatchReportIDGetAsync($actor_id, $batch_report_id)
+    public function shipServerActorIDBatchReportsBatchReportIDGetAsync($actorID, $batchReportID)
     {
-        return $this->shipServerActorIDBatchReportsBatchReportIDGetAsyncWithHttpInfo($actor_id, $batch_report_id)
+        return $this->shipServerActorIDBatchReportsBatchReportIDGetAsyncWithHttpInfo($actorID, $batchReportID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -489,16 +489,16 @@ class ShipServerApi
      *
      * Get batch report
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_report_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchReportID Job ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchReportsBatchReportIDGetAsyncWithHttpInfo($actor_id, $batch_report_id)
+    public function shipServerActorIDBatchReportsBatchReportIDGetAsyncWithHttpInfo($actorID, $batchReportID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchReportsBatchReportIDGetRequest($actor_id, $batch_report_id);
+        $request = $this->shipServerActorIDBatchReportsBatchReportIDGetRequest($actorID, $batchReportID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -526,24 +526,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDBatchReportsBatchReportIDGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_report_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchReportID Job ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDBatchReportsBatchReportIDGetRequest($actor_id, $batch_report_id)
+    protected function shipServerActorIDBatchReportsBatchReportIDGetRequest($actorID, $batchReportID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDBatchReportsBatchReportIDGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDBatchReportsBatchReportIDGet'
             );
         }
-        // verify the required parameter 'batch_report_id' is set
-        if ($batch_report_id === null || (is_array($batch_report_id) && count($batch_report_id) === 0)) {
+        // verify the required parameter 'batchReportID' is set
+        if ($batchReportID === null || (is_array($batchReportID) && count($batchReportID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_report_id when calling shipServerActorIDBatchReportsBatchReportIDGet'
+                'Missing the required parameter $batchReportID when calling shipServerActorIDBatchReportsBatchReportIDGet'
             );
         }
 
@@ -556,18 +556,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($batch_report_id !== null) {
+        if ($batchReportID !== null) {
             $resourcePath = str_replace(
                 '{' . 'batchReportID' . '}',
-                ObjectSerializer::toPathValue($batch_report_id),
+                ObjectSerializer::toPathValue($batchReportID),
                 $resourcePath
             );
         }
@@ -650,16 +650,16 @@ class ShipServerApi
      *
      * Get batch shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDBatchShipmentsBatchIDGet($actor_id, $batch_id)
+    public function shipServerActorIDBatchShipmentsBatchIDGet($actorID, $batchID)
     {
-        $this->shipServerActorIDBatchShipmentsBatchIDGetWithHttpInfo($actor_id, $batch_id);
+        $this->shipServerActorIDBatchShipmentsBatchIDGetWithHttpInfo($actorID, $batchID);
     }
 
     /**
@@ -667,17 +667,17 @@ class ShipServerApi
      *
      * Get batch shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDBatchShipmentsBatchIDGetWithHttpInfo($actor_id, $batch_id)
+    public function shipServerActorIDBatchShipmentsBatchIDGetWithHttpInfo($actorID, $batchID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchShipmentsBatchIDGetRequest($actor_id, $batch_id);
+        $request = $this->shipServerActorIDBatchShipmentsBatchIDGetRequest($actorID, $batchID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -721,15 +721,15 @@ class ShipServerApi
      *
      * Get batch shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchShipmentsBatchIDGetAsync($actor_id, $batch_id)
+    public function shipServerActorIDBatchShipmentsBatchIDGetAsync($actorID, $batchID)
     {
-        return $this->shipServerActorIDBatchShipmentsBatchIDGetAsyncWithHttpInfo($actor_id, $batch_id)
+        return $this->shipServerActorIDBatchShipmentsBatchIDGetAsyncWithHttpInfo($actorID, $batchID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -742,16 +742,16 @@ class ShipServerApi
      *
      * Get batch shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchShipmentsBatchIDGetAsyncWithHttpInfo($actor_id, $batch_id)
+    public function shipServerActorIDBatchShipmentsBatchIDGetAsyncWithHttpInfo($actorID, $batchID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchShipmentsBatchIDGetRequest($actor_id, $batch_id);
+        $request = $this->shipServerActorIDBatchShipmentsBatchIDGetRequest($actorID, $batchID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -779,24 +779,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDBatchShipmentsBatchIDGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDBatchShipmentsBatchIDGetRequest($actor_id, $batch_id)
+    protected function shipServerActorIDBatchShipmentsBatchIDGetRequest($actorID, $batchID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDBatchShipmentsBatchIDGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDBatchShipmentsBatchIDGet'
             );
         }
-        // verify the required parameter 'batch_id' is set
-        if ($batch_id === null || (is_array($batch_id) && count($batch_id) === 0)) {
+        // verify the required parameter 'batchID' is set
+        if ($batchID === null || (is_array($batchID) && count($batchID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_id when calling shipServerActorIDBatchShipmentsBatchIDGet'
+                'Missing the required parameter $batchID when calling shipServerActorIDBatchShipmentsBatchIDGet'
             );
         }
 
@@ -809,18 +809,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($batch_id !== null) {
+        if ($batchID !== null) {
             $resourcePath = str_replace(
                 '{' . 'batchID' . '}',
-                ObjectSerializer::toPathValue($batch_id),
+                ObjectSerializer::toPathValue($batchID),
                 $resourcePath
             );
         }
@@ -903,16 +903,16 @@ class ShipServerApi
      *
      * Get Batch Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDBatchesBatchIDGet($actor_id, $batch_id)
+    public function shipServerActorIDBatchesBatchIDGet($actorID, $batchID)
     {
-        $this->shipServerActorIDBatchesBatchIDGetWithHttpInfo($actor_id, $batch_id);
+        $this->shipServerActorIDBatchesBatchIDGetWithHttpInfo($actorID, $batchID);
     }
 
     /**
@@ -920,17 +920,17 @@ class ShipServerApi
      *
      * Get Batch Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDBatchesBatchIDGetWithHttpInfo($actor_id, $batch_id)
+    public function shipServerActorIDBatchesBatchIDGetWithHttpInfo($actorID, $batchID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchesBatchIDGetRequest($actor_id, $batch_id);
+        $request = $this->shipServerActorIDBatchesBatchIDGetRequest($actorID, $batchID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -974,15 +974,15 @@ class ShipServerApi
      *
      * Get Batch Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchesBatchIDGetAsync($actor_id, $batch_id)
+    public function shipServerActorIDBatchesBatchIDGetAsync($actorID, $batchID)
     {
-        return $this->shipServerActorIDBatchesBatchIDGetAsyncWithHttpInfo($actor_id, $batch_id)
+        return $this->shipServerActorIDBatchesBatchIDGetAsyncWithHttpInfo($actorID, $batchID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -995,16 +995,16 @@ class ShipServerApi
      *
      * Get Batch Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchesBatchIDGetAsyncWithHttpInfo($actor_id, $batch_id)
+    public function shipServerActorIDBatchesBatchIDGetAsyncWithHttpInfo($actorID, $batchID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchesBatchIDGetRequest($actor_id, $batch_id);
+        $request = $this->shipServerActorIDBatchesBatchIDGetRequest($actorID, $batchID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1032,24 +1032,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDBatchesBatchIDGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $batch_id Batch ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $batchID Batch ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDBatchesBatchIDGetRequest($actor_id, $batch_id)
+    protected function shipServerActorIDBatchesBatchIDGetRequest($actorID, $batchID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDBatchesBatchIDGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDBatchesBatchIDGet'
             );
         }
-        // verify the required parameter 'batch_id' is set
-        if ($batch_id === null || (is_array($batch_id) && count($batch_id) === 0)) {
+        // verify the required parameter 'batchID' is set
+        if ($batchID === null || (is_array($batchID) && count($batchID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_id when calling shipServerActorIDBatchesBatchIDGet'
+                'Missing the required parameter $batchID when calling shipServerActorIDBatchesBatchIDGet'
             );
         }
 
@@ -1062,18 +1062,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($batch_id !== null) {
+        if ($batchID !== null) {
             $resourcePath = str_replace(
                 '{' . 'batchID' . '}',
-                ObjectSerializer::toPathValue($batch_id),
+                ObjectSerializer::toPathValue($batchID),
                 $resourcePath
             );
         }
@@ -1156,16 +1156,16 @@ class ShipServerApi
      *
      * Get Batch List
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDBatchesPost($actor_id, $body = null)
+    public function shipServerActorIDBatchesPost($actorID, $body = null)
     {
-        $this->shipServerActorIDBatchesPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDBatchesPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -1173,17 +1173,17 @@ class ShipServerApi
      *
      * Get Batch List
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDBatchesPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDBatchesPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDBatchesPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1227,15 +1227,15 @@ class ShipServerApi
      *
      * Get Batch List
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchesPostAsync($actor_id, $body = null)
+    public function shipServerActorIDBatchesPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDBatchesPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDBatchesPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1248,16 +1248,16 @@ class ShipServerApi
      *
      * Get Batch List
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDBatchesPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDBatchesPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDBatchesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDBatchesPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1285,18 +1285,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDBatchesPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;StartIndex&quot;:&quot;0&quot;, &quot;Count&quot;:5, &quot;SortField&quot;:&quot;TransmitDt&quot;, &quot;SortDirection&quot;:1}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDBatchesPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDBatchesPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDBatchesPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDBatchesPost'
             );
         }
 
@@ -1309,10 +1309,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -1398,16 +1398,16 @@ class ShipServerApi
      *
      * Get delivery optionswithout shipping rules defined
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDCheckoutPost($actor_id, $body = null)
+    public function shipServerActorIDCheckoutPost($actorID, $body = null)
     {
-        $this->shipServerActorIDCheckoutPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDCheckoutPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -1415,17 +1415,17 @@ class ShipServerApi
      *
      * Get delivery optionswithout shipping rules defined
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDCheckoutPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDCheckoutPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDCheckoutPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDCheckoutPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1469,15 +1469,15 @@ class ShipServerApi
      *
      * Get delivery optionswithout shipping rules defined
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDCheckoutPostAsync($actor_id, $body = null)
+    public function shipServerActorIDCheckoutPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDCheckoutPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDCheckoutPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1490,16 +1490,16 @@ class ShipServerApi
      *
      * Get delivery optionswithout shipping rules defined
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDCheckoutPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDCheckoutPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDCheckoutPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDCheckoutPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1527,18 +1527,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDCheckoutPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDCheckoutPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDCheckoutPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDCheckoutPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDCheckoutPost'
             );
         }
 
@@ -1551,10 +1551,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -1640,17 +1640,17 @@ class ShipServerApi
      *
      * Get drop point by ID
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $drop_point_id Drop Point ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $dropPointID Drop Point ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDDropPointIDsDropPointIDPost($actor_id, $drop_point_id, $body = null)
+    public function shipServerActorIDDropPointIDsDropPointIDPost($actorID, $dropPointID, $body = null)
     {
-        $this->shipServerActorIDDropPointIDsDropPointIDPostWithHttpInfo($actor_id, $drop_point_id, $body);
+        $this->shipServerActorIDDropPointIDsDropPointIDPostWithHttpInfo($actorID, $dropPointID, $body);
     }
 
     /**
@@ -1658,18 +1658,18 @@ class ShipServerApi
      *
      * Get drop point by ID
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $drop_point_id Drop Point ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $dropPointID Drop Point ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDDropPointIDsDropPointIDPostWithHttpInfo($actor_id, $drop_point_id, $body = null)
+    public function shipServerActorIDDropPointIDsDropPointIDPostWithHttpInfo($actorID, $dropPointID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDDropPointIDsDropPointIDPostRequest($actor_id, $drop_point_id, $body);
+        $request = $this->shipServerActorIDDropPointIDsDropPointIDPostRequest($actorID, $dropPointID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1713,16 +1713,16 @@ class ShipServerApi
      *
      * Get drop point by ID
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $drop_point_id Drop Point ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $dropPointID Drop Point ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDDropPointIDsDropPointIDPostAsync($actor_id, $drop_point_id, $body = null)
+    public function shipServerActorIDDropPointIDsDropPointIDPostAsync($actorID, $dropPointID, $body = null)
     {
-        return $this->shipServerActorIDDropPointIDsDropPointIDPostAsyncWithHttpInfo($actor_id, $drop_point_id, $body)
+        return $this->shipServerActorIDDropPointIDsDropPointIDPostAsyncWithHttpInfo($actorID, $dropPointID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1735,17 +1735,17 @@ class ShipServerApi
      *
      * Get drop point by ID
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $drop_point_id Drop Point ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $dropPointID Drop Point ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDDropPointIDsDropPointIDPostAsyncWithHttpInfo($actor_id, $drop_point_id, $body = null)
+    public function shipServerActorIDDropPointIDsDropPointIDPostAsyncWithHttpInfo($actorID, $dropPointID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDDropPointIDsDropPointIDPostRequest($actor_id, $drop_point_id, $body);
+        $request = $this->shipServerActorIDDropPointIDsDropPointIDPostRequest($actorID, $dropPointID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1773,25 +1773,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDDropPointIDsDropPointIDPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $drop_point_id Drop Point ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $dropPointID Drop Point ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 1041, &quot;Services&quot;: [ 142002 ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;sample&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1400&quot;, &quot;City&quot;: &quot;city&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ] } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDDropPointIDsDropPointIDPostRequest($actor_id, $drop_point_id, $body = null)
+    protected function shipServerActorIDDropPointIDsDropPointIDPostRequest($actorID, $dropPointID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDDropPointIDsDropPointIDPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDDropPointIDsDropPointIDPost'
             );
         }
-        // verify the required parameter 'drop_point_id' is set
-        if ($drop_point_id === null || (is_array($drop_point_id) && count($drop_point_id) === 0)) {
+        // verify the required parameter 'dropPointID' is set
+        if ($dropPointID === null || (is_array($dropPointID) && count($dropPointID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $drop_point_id when calling shipServerActorIDDropPointIDsDropPointIDPost'
+                'Missing the required parameter $dropPointID when calling shipServerActorIDDropPointIDsDropPointIDPost'
             );
         }
 
@@ -1804,18 +1804,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($drop_point_id !== null) {
+        if ($dropPointID !== null) {
             $resourcePath = str_replace(
                 '{' . 'dropPointID' . '}',
-                ObjectSerializer::toPathValue($drop_point_id),
+                ObjectSerializer::toPathValue($dropPointID),
                 $resourcePath
             );
         }
@@ -1901,16 +1901,16 @@ class ShipServerApi
      *
      * Get drop points
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDDropPointsPost($actor_id, $body = null)
+    public function shipServerActorIDDropPointsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDDropPointsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDDropPointsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -1918,17 +1918,17 @@ class ShipServerApi
      *
      * Get drop points
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDDropPointsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDDropPointsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDDropPointsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDDropPointsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1972,15 +1972,15 @@ class ShipServerApi
      *
      * Get drop points
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDDropPointsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDDropPointsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDDropPointsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDDropPointsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1993,16 +1993,16 @@ class ShipServerApi
      *
      * Get drop points
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDDropPointsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDDropPointsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDDropPointsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDDropPointsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2030,18 +2030,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDDropPointsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 5748, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;1132nb&quot;, &quot;City&quot;: &quot;Volendam&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NL&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;24539&quot;, &quot;City&quot;: &quot;Neumünster&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;DE&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 2775, &quot;PkgWeight&quot;: 2775, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ], &quot;Services&quot;: [ 676008 ] }, &quot;options&quot;: { &quot;EarliestPickup&quot;: &quot;2021-06-16T06:00&quot;, &quot;LatestPickup&quot;: &quot;2021-06-16T21:00&quot;, &quot;TimeLog&quot;: 1 } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDDropPointsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDDropPointsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDDropPointsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDDropPointsPost'
             );
         }
 
@@ -2054,10 +2054,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -2143,16 +2143,16 @@ class ShipServerApi
      *
      * Import Upload
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDImportUploadPost($actor_id, $body = null)
+    public function shipServerActorIDImportUploadPost($actorID, $body = null)
     {
-        $this->shipServerActorIDImportUploadPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDImportUploadPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -2160,17 +2160,17 @@ class ShipServerApi
      *
      * Import Upload
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDImportUploadPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDImportUploadPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDImportUploadPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDImportUploadPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2214,15 +2214,15 @@ class ShipServerApi
      *
      * Import Upload
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDImportUploadPostAsync($actor_id, $body = null)
+    public function shipServerActorIDImportUploadPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDImportUploadPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDImportUploadPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2235,16 +2235,16 @@ class ShipServerApi
      *
      * Import Upload
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDImportUploadPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDImportUploadPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDImportUploadPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDImportUploadPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2272,18 +2272,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDImportUploadPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;filename&quot;: &quot;Import1.txt&quot;, &quot;filecontent&quot;: &quot;MTEzNjE7NzA0NzQ7TmFtZTs7OzAwMDAwMDAwO0hhbG1zdGFkO1NFO0s2ODM2NjA7OztQMTk7RElCUzs0NTQ7U0VLOzs7&quot;, &quot;importkeys&quot;: &quot;W10&#x3D;&quot;, &quot;version&quot;: &quot;0.0&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDImportUploadPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDImportUploadPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDImportUploadPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDImportUploadPost'
             );
         }
 
@@ -2296,10 +2296,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -2385,16 +2385,16 @@ class ShipServerApi
      *
      * Get job
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $job_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $jobID Job ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDJobsJobIDGet($actor_id, $job_id)
+    public function shipServerActorIDJobsJobIDGet($actorID, $jobID)
     {
-        $this->shipServerActorIDJobsJobIDGetWithHttpInfo($actor_id, $job_id);
+        $this->shipServerActorIDJobsJobIDGetWithHttpInfo($actorID, $jobID);
     }
 
     /**
@@ -2402,17 +2402,17 @@ class ShipServerApi
      *
      * Get job
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $job_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $jobID Job ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDJobsJobIDGetWithHttpInfo($actor_id, $job_id)
+    public function shipServerActorIDJobsJobIDGetWithHttpInfo($actorID, $jobID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDJobsJobIDGetRequest($actor_id, $job_id);
+        $request = $this->shipServerActorIDJobsJobIDGetRequest($actorID, $jobID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2456,15 +2456,15 @@ class ShipServerApi
      *
      * Get job
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $job_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $jobID Job ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDJobsJobIDGetAsync($actor_id, $job_id)
+    public function shipServerActorIDJobsJobIDGetAsync($actorID, $jobID)
     {
-        return $this->shipServerActorIDJobsJobIDGetAsyncWithHttpInfo($actor_id, $job_id)
+        return $this->shipServerActorIDJobsJobIDGetAsyncWithHttpInfo($actorID, $jobID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2477,16 +2477,16 @@ class ShipServerApi
      *
      * Get job
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $job_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $jobID Job ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDJobsJobIDGetAsyncWithHttpInfo($actor_id, $job_id)
+    public function shipServerActorIDJobsJobIDGetAsyncWithHttpInfo($actorID, $jobID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDJobsJobIDGetRequest($actor_id, $job_id);
+        $request = $this->shipServerActorIDJobsJobIDGetRequest($actorID, $jobID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2514,24 +2514,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDJobsJobIDGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $job_id Job ID (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $jobID Job ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDJobsJobIDGetRequest($actor_id, $job_id)
+    protected function shipServerActorIDJobsJobIDGetRequest($actorID, $jobID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDJobsJobIDGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDJobsJobIDGet'
             );
         }
-        // verify the required parameter 'job_id' is set
-        if ($job_id === null || (is_array($job_id) && count($job_id) === 0)) {
+        // verify the required parameter 'jobID' is set
+        if ($jobID === null || (is_array($jobID) && count($jobID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $job_id when calling shipServerActorIDJobsJobIDGet'
+                'Missing the required parameter $jobID when calling shipServerActorIDJobsJobIDGet'
             );
         }
 
@@ -2544,18 +2544,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($job_id !== null) {
+        if ($jobID !== null) {
             $resourcePath = str_replace(
                 '{' . 'jobID' . '}',
-                ObjectSerializer::toPathValue($job_id),
+                ObjectSerializer::toPathValue($jobID),
                 $resourcePath
             );
         }
@@ -2638,16 +2638,16 @@ class ShipServerApi
      *
      * Creation of an order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDOrderAdvicePost($actor_id, $body = null)
+    public function shipServerActorIDOrderAdvicePost($actorID, $body = null)
     {
-        $this->shipServerActorIDOrderAdvicePostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDOrderAdvicePostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -2655,17 +2655,17 @@ class ShipServerApi
      *
      * Creation of an order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDOrderAdvicePostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDOrderAdvicePostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDOrderAdvicePostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDOrderAdvicePostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2709,15 +2709,15 @@ class ShipServerApi
      *
      * Creation of an order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDOrderAdvicePostAsync($actor_id, $body = null)
+    public function shipServerActorIDOrderAdvicePostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDOrderAdvicePostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDOrderAdvicePostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2730,16 +2730,16 @@ class ShipServerApi
      *
      * Creation of an order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDOrderAdvicePostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDOrderAdvicePostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDOrderAdvicePostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDOrderAdvicePostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2767,18 +2767,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDOrderAdvicePost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;OrderNo&quot;: &quot;772157949528&quot;, &quot;Lines&quot;: [ { &quot;Length&quot;: 150, &quot;Height&quot;: 100, &quot;PkgWeight&quot;: 130, &quot;Width&quot;: 100, &quot;PkgVol&quot;: 1500000, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1, &quot;PkgNo&quot;: &quot;&quot; } ] } ], &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0360&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;POPostCode&quot;: &quot;0580&quot;, &quot;POCity&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Mobile&quot;: &quot;12341234&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 7, &quot;Value&quot;: &quot;ECOM12364313&quot; } ] }, &quot;options&quot;: { &quot;ServiceLevel&quot;: &quot;STANDARD&quot;, &quot;RequiredDeliveryDate&quot;: &quot;2021-10-25&quot;, &quot;UseShippingRules&quot;: &quot;1&quot;, &quot;ValidatePostCode&quot;: null, &quot;Visibility&quot;: &quot;extended&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDOrderAdvicePostRequest($actor_id, $body = null)
+    protected function shipServerActorIDOrderAdvicePostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDOrderAdvicePost'
+                'Missing the required parameter $actorID when calling shipServerActorIDOrderAdvicePost'
             );
         }
 
@@ -2791,10 +2791,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -2880,16 +2880,16 @@ class ShipServerApi
      *
      * Store order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDOrdersPost($actor_id, $body = null)
+    public function shipServerActorIDOrdersPost($actorID, $body = null)
     {
-        $this->shipServerActorIDOrdersPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDOrdersPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -2897,17 +2897,17 @@ class ShipServerApi
      *
      * Store order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDOrdersPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDOrdersPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDOrdersPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDOrdersPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2951,15 +2951,15 @@ class ShipServerApi
      *
      * Store order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDOrdersPostAsync($actor_id, $body = null)
+    public function shipServerActorIDOrdersPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDOrdersPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDOrdersPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2972,16 +2972,16 @@ class ShipServerApi
      *
      * Store order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDOrdersPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDOrdersPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDOrdersPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDOrdersPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3009,18 +3009,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDOrdersPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;OrderNo&quot;:19576,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Leveranser AB&quot;,&quot;Street1&quot;:&quot;Test Street 1&quot;,&quot;PostCode&quot;:&quot;24542&quot;,&quot;City&quot;:&quot;Staffanstorp&quot;,&quot;Phone&quot;:&quot;00000000&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;:&quot;TEST&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:2,&quot;Name1&quot;:&quot;Consignor AB&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;22350&quot;,&quot;City&quot;:&quot;Lund&quot;,&quot;Phone&quot;:&quot;046-123456&quot;,&quot;Mobile&quot;:&quot;046-123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Attention&quot;: &quot;Kundtjänst&quot;,&quot;CountryCode&quot;:&quot;SE&quot;},{&quot;Kind&quot;:10,&quot;CustNo&quot;:&quot;&quot;}],&quot;Amounts&quot;:[{&quot;Kind&quot;:10,&quot;CurrencyCode&quot;:3,&quot;Value&quot;:&quot;&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:2000,&quot;Height&quot;:&quot;150&quot;,&quot;Length&quot;:&quot;150&quot;,&quot;Width&quot;:&quot;150&quot;,&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;&quot;}],&quot;PkgVol&quot;:0,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;OrderID&quot;:&quot;12345&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDOrdersPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDOrdersPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDOrdersPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDOrdersPost'
             );
         }
 
@@ -3033,10 +3033,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -3122,16 +3122,16 @@ class ShipServerApi
      *
      * Transmit/manifest packages
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDPackagesManifestPut($actor_id, $body = null)
+    public function shipServerActorIDPackagesManifestPut($actorID, $body = null)
     {
-        $this->shipServerActorIDPackagesManifestPutWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDPackagesManifestPutWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -3139,17 +3139,17 @@ class ShipServerApi
      *
      * Transmit/manifest packages
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDPackagesManifestPutWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDPackagesManifestPutWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDPackagesManifestPutRequest($actor_id, $body);
+        $request = $this->shipServerActorIDPackagesManifestPutRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3193,15 +3193,15 @@ class ShipServerApi
      *
      * Transmit/manifest packages
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDPackagesManifestPutAsync($actor_id, $body = null)
+    public function shipServerActorIDPackagesManifestPutAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDPackagesManifestPutAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDPackagesManifestPutAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3214,16 +3214,16 @@ class ShipServerApi
      *
      * Transmit/manifest packages
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDPackagesManifestPutAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDPackagesManifestPutAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDPackagesManifestPutRequest($actor_id, $body);
+        $request = $this->shipServerActorIDPackagesManifestPutRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3251,18 +3251,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDPackagesManifestPut'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;PackageCSIDs&quot;:[4566,4585]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDPackagesManifestPutRequest($actor_id, $body = null)
+    protected function shipServerActorIDPackagesManifestPutRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDPackagesManifestPut'
+                'Missing the required parameter $actorID when calling shipServerActorIDPackagesManifestPut'
             );
         }
 
@@ -3275,10 +3275,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -3364,16 +3364,16 @@ class ShipServerApi
      *
      * Pickup Locker Allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDPickupLockerAllocationsPost($actor_id, $body = null)
+    public function shipServerActorIDPickupLockerAllocationsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDPickupLockerAllocationsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDPickupLockerAllocationsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -3381,17 +3381,17 @@ class ShipServerApi
      *
      * Pickup Locker Allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDPickupLockerAllocationsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDPickupLockerAllocationsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDPickupLockerAllocationsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDPickupLockerAllocationsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3435,15 +3435,15 @@ class ShipServerApi
      *
      * Pickup Locker Allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDPickupLockerAllocationsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDPickupLockerAllocationsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDPickupLockerAllocationsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDPickupLockerAllocationsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3456,16 +3456,16 @@ class ShipServerApi
      *
      * Pickup Locker Allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDPickupLockerAllocationsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDPickupLockerAllocationsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDPickupLockerAllocationsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDPickupLockerAllocationsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3493,18 +3493,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDPickupLockerAllocationsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [{&quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;+4411223344&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;ERPRef&quot;: &quot;5&quot;}, {&quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Lisebergsvägen 2&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;99887766&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Country&quot;: &quot;Sweden&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;}], &quot;References&quot;: [{&quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot;}, {&quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot;}, {&quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot;}, {&quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot;}], &quot;Lines&quot;: [{&quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [{&quot;ItemNo&quot;: 3}], &quot;References&quot;: [{&quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;PickupLockerToken&quot;:&quot;ZXlKemIzSjBYMk52WkdVaU9pSkpUalVpTENKaGRtRnBiR0ZpYVd4cGRIbGZkRzlyWlc0aU9pSmlNekU1T1RkbFlTMDRPVFZoTFRSbFpqY3RPR1ZtWkMwek5XVTRNak5oWkdVNFlXSWlmUT09O0lONTtULU1hcmlhdG9yZ2V0IChTd2VkZW5ib3Jnc2cpIFByZXNzYnlyw6VuIChpbW9yZ29uIH4xNjowMCk7O1dvbGxtYXIgWXhrdWxsc2dhdGFuIDg7V29sbG1hciBZeGt1bGxzZ2F0YW4gODsxMTg1MDtTdG9ja2hvbG07O1NFOzs7&quot;, &quot;TimeLog&quot;: 1,&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDPickupLockerAllocationsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDPickupLockerAllocationsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDPickupLockerAllocationsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDPickupLockerAllocationsPost'
             );
         }
 
@@ -3517,10 +3517,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -3606,16 +3606,16 @@ class ShipServerApi
      *
      * Get pickup lockers
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDPickupLockersPost($actor_id, $body = null)
+    public function shipServerActorIDPickupLockersPost($actorID, $body = null)
     {
-        $this->shipServerActorIDPickupLockersPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDPickupLockersPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -3623,17 +3623,17 @@ class ShipServerApi
      *
      * Get pickup lockers
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDPickupLockersPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDPickupLockersPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDPickupLockersPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDPickupLockersPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3677,15 +3677,15 @@ class ShipServerApi
      *
      * Get pickup lockers
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDPickupLockersPostAsync($actor_id, $body = null)
+    public function shipServerActorIDPickupLockersPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDPickupLockersPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDPickupLockersPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3698,16 +3698,16 @@ class ShipServerApi
      *
      * Get pickup lockers
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDPickupLockersPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDPickupLockersPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDPickupLockersPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDPickupLockersPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3735,18 +3735,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDPickupLockersPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ProdConceptID&quot;: 7358, &quot;AgentNo&quot;: &quot;1344&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Test Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Sender Test&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;43891&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;City&quot;: &quot;Landvetter&quot;, &quot;CustNo&quot;: &quot;3425964&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ], &quot;References&quot;: [ { &quot;Kind&quot;: 108, &quot;Value&quot;: &quot;2021-10-15T00:00:00&quot; }, { &quot;Kind&quot;: 109, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 110, &quot;Value&quot;: &quot;2021-10-15T00:01:00&quot; }, { &quot;Kind&quot;: 111, &quot;Value&quot;: &quot;2021-10-15T00:22:00&quot; }, { &quot;Kind&quot;: 140, &quot;Value&quot;: &quot;a@b.c&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 4000, &quot;PkgWeight&quot;: 4000, &quot;Width&quot;: 10, &quot;Height&quot;: 400, &quot;Length&quot;: 10, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 3 } ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;cool stuff&quot; } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 1, &quot;Token&quot;: &quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDPickupLockersPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDPickupLockersPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDPickupLockersPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDPickupLockersPost'
             );
         }
 
@@ -3759,10 +3759,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -3848,15 +3848,15 @@ class ShipServerApi
      *
      * Get Products
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDProductsGet($actor_id)
+    public function shipServerActorIDProductsGet($actorID)
     {
-        $this->shipServerActorIDProductsGetWithHttpInfo($actor_id);
+        $this->shipServerActorIDProductsGetWithHttpInfo($actorID);
     }
 
     /**
@@ -3864,16 +3864,16 @@ class ShipServerApi
      *
      * Get Products
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDProductsGetWithHttpInfo($actor_id)
+    public function shipServerActorIDProductsGetWithHttpInfo($actorID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDProductsGetRequest($actor_id);
+        $request = $this->shipServerActorIDProductsGetRequest($actorID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3917,14 +3917,14 @@ class ShipServerApi
      *
      * Get Products
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDProductsGetAsync($actor_id)
+    public function shipServerActorIDProductsGetAsync($actorID)
     {
-        return $this->shipServerActorIDProductsGetAsyncWithHttpInfo($actor_id)
+        return $this->shipServerActorIDProductsGetAsyncWithHttpInfo($actorID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3937,15 +3937,15 @@ class ShipServerApi
      *
      * Get Products
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDProductsGetAsyncWithHttpInfo($actor_id)
+    public function shipServerActorIDProductsGetAsyncWithHttpInfo($actorID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDProductsGetRequest($actor_id);
+        $request = $this->shipServerActorIDProductsGetRequest($actorID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3973,17 +3973,17 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDProductsGet'
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDProductsGetRequest($actor_id)
+    protected function shipServerActorIDProductsGetRequest($actorID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDProductsGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDProductsGet'
             );
         }
 
@@ -3996,10 +3996,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -4082,16 +4082,16 @@ class ShipServerApi
      *
      * Save shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDSaveShipmentPost($actor_id, $body = null)
+    public function shipServerActorIDSaveShipmentPost($actorID, $body = null)
     {
-        $this->shipServerActorIDSaveShipmentPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDSaveShipmentPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -4099,17 +4099,17 @@ class ShipServerApi
      *
      * Save shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDSaveShipmentPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDSaveShipmentPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDSaveShipmentPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDSaveShipmentPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4153,15 +4153,15 @@ class ShipServerApi
      *
      * Save shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDSaveShipmentPostAsync($actor_id, $body = null)
+    public function shipServerActorIDSaveShipmentPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDSaveShipmentPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDSaveShipmentPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4174,16 +4174,16 @@ class ShipServerApi
      *
      * Save shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDSaveShipmentPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDSaveShipmentPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDSaveShipmentPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDSaveShipmentPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4211,18 +4211,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDSaveShipmentPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;CustNo&quot;: &quot;5&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;Country&quot;: &quot;Sweden&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDSaveShipmentPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDSaveShipmentPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDSaveShipmentPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDSaveShipmentPost'
             );
         }
 
@@ -4235,10 +4235,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -4324,15 +4324,15 @@ class ShipServerApi
      *
      * Get Sender Address
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDSenderAddressGet($actor_id)
+    public function shipServerActorIDSenderAddressGet($actorID)
     {
-        $this->shipServerActorIDSenderAddressGetWithHttpInfo($actor_id);
+        $this->shipServerActorIDSenderAddressGetWithHttpInfo($actorID);
     }
 
     /**
@@ -4340,16 +4340,16 @@ class ShipServerApi
      *
      * Get Sender Address
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDSenderAddressGetWithHttpInfo($actor_id)
+    public function shipServerActorIDSenderAddressGetWithHttpInfo($actorID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDSenderAddressGetRequest($actor_id);
+        $request = $this->shipServerActorIDSenderAddressGetRequest($actorID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4393,14 +4393,14 @@ class ShipServerApi
      *
      * Get Sender Address
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDSenderAddressGetAsync($actor_id)
+    public function shipServerActorIDSenderAddressGetAsync($actorID)
     {
-        return $this->shipServerActorIDSenderAddressGetAsyncWithHttpInfo($actor_id)
+        return $this->shipServerActorIDSenderAddressGetAsyncWithHttpInfo($actorID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4413,15 +4413,15 @@ class ShipServerApi
      *
      * Get Sender Address
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDSenderAddressGetAsyncWithHttpInfo($actor_id)
+    public function shipServerActorIDSenderAddressGetAsyncWithHttpInfo($actorID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDSenderAddressGetRequest($actor_id);
+        $request = $this->shipServerActorIDSenderAddressGetRequest($actorID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4449,17 +4449,17 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDSenderAddressGet'
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDSenderAddressGetRequest($actor_id)
+    protected function shipServerActorIDSenderAddressGetRequest($actorID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDSenderAddressGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDSenderAddressGet'
             );
         }
 
@@ -4472,10 +4472,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -4558,16 +4558,16 @@ class ShipServerApi
      *
      * Get delivery options
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipAdvisesPost($actor_id, $body = null)
+    public function shipServerActorIDShipAdvisesPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShipAdvisesPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipAdvisesPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -4575,17 +4575,17 @@ class ShipServerApi
      *
      * Get delivery options
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipAdvisesPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipAdvisesPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipAdvisesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipAdvisesPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4629,15 +4629,15 @@ class ShipServerApi
      *
      * Get delivery options
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipAdvisesPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShipAdvisesPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipAdvisesPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipAdvisesPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4650,16 +4650,16 @@ class ShipServerApi
      *
      * Get delivery options
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipAdvisesPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipAdvisesPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipAdvisesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipAdvisesPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4687,18 +4687,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipAdvisesPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ServiceLevel&quot;:&quot;test&quot;,&quot;Price&quot;:&quot;1&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipAdvisesPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipAdvisesPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipAdvisesPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipAdvisesPost'
             );
         }
 
@@ -4711,10 +4711,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -4800,16 +4800,16 @@ class ShipServerApi
      *
      * Get Shipment Price
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentPricesPost($actor_id, $body = null)
+    public function shipServerActorIDShipmentPricesPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShipmentPricesPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipmentPricesPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -4817,17 +4817,17 @@ class ShipServerApi
      *
      * Get Shipment Price
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentPricesPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentPricesPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentPricesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentPricesPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4871,15 +4871,15 @@ class ShipServerApi
      *
      * Get Shipment Price
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentPricesPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShipmentPricesPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipmentPricesPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipmentPricesPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4892,16 +4892,16 @@ class ShipServerApi
      *
      * Get Shipment Price
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentPricesPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentPricesPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentPricesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentPricesPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4929,18 +4929,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentPricesPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;DimensionalWeight&quot;: 900, &quot;Weight&quot;: 900, &quot;ActorCSID&quot;: 73, &quot;CarriagePayer&quot;: 1, &quot;ProdConceptID&quot;: 2, &quot;StackCSID&quot;: &quot;155&quot;, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Bane&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;5863&quot;, &quot;City&quot;: &quot;BERGEN&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;Oslo&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 900, &quot;PkgWeight&quot;: 900, &quot;Number&quot;: 1 } ] } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentPricesPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipmentPricesPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentPricesPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentPricesPost'
             );
         }
 
@@ -4953,10 +4953,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -5042,16 +5042,16 @@ class ShipServerApi
      *
      * Validate shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentValidationsPost($actor_id, $body = null)
+    public function shipServerActorIDShipmentValidationsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShipmentValidationsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipmentValidationsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -5059,17 +5059,17 @@ class ShipServerApi
      *
      * Validate shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentValidationsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentValidationsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentValidationsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentValidationsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5113,15 +5113,15 @@ class ShipServerApi
      *
      * Validate shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentValidationsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShipmentValidationsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipmentValidationsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipmentValidationsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5134,16 +5134,16 @@ class ShipServerApi
      *
      * Validate shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentValidationsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentValidationsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentValidationsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentValidationsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5171,18 +5171,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentValidationsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;RecName1&quot;, &quot;Name2&quot;: &quot;RecName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0680&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Phone&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;SenName1&quot;, &quot;Name2&quot;: &quot;SenName2&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;0681&quot;, &quot;City&quot;: &quot;OSLO&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, &quot;CountryCode&quot;: &quot;NO&quot; } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 5000, &quot;PkgWeight&quot;: 5000, &quot;GoodsTypeID&quot;: 1, &quot;Pkgs&quot;: [ {}, {} ], &quot;References&quot;: [ { &quot;Kind&quot;: 23, &quot;Value&quot;: &quot;Contents&quot; } ] } ], &quot;References&quot;: [ { &quot;Kind&quot;: 32, &quot;Value&quot;: &quot;AdditionalReference 1&quot; } ], &quot;Amounts&quot;: [ { &quot;Kind&quot;: 1, &quot;CurrencyCode&quot;: &quot;1&quot;, &quot;CurrencyClientId&quot;: 1, &quot;Value&quot;: 10, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;Messages&quot;: [ { &quot;Kind&quot;: 2, &quot;Text&quot;: &quot;CarrierMessage 1&quot;, &quot;ShipmentId&quot;: 0, &quot;Id&quot;: 0 } ], &quot;ProdConceptID&quot;: 185 }, &quot;options&quot;: { &quot;Labels&quot;: &quot;none&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentValidationsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipmentValidationsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentValidationsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentValidationsPost'
             );
         }
 
@@ -5195,10 +5195,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -5284,16 +5284,16 @@ class ShipServerApi
      *
      * Apply defaults on shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsDefaultsPost($actor_id, $body = null)
+    public function shipServerActorIDShipmentsDefaultsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShipmentsDefaultsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipmentsDefaultsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -5301,17 +5301,17 @@ class ShipServerApi
      *
      * Apply defaults on shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsDefaultsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsDefaultsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsDefaultsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsDefaultsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5355,15 +5355,15 @@ class ShipServerApi
      *
      * Apply defaults on shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsDefaultsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShipmentsDefaultsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipmentsDefaultsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipmentsDefaultsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5376,16 +5376,16 @@ class ShipServerApi
      *
      * Apply defaults on shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsDefaultsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsDefaultsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsDefaultsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsDefaultsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5413,18 +5413,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsDefaultsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:&quot;1&quot;,&quot;ProdCSID&quot;:4338,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Mr Test Order&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;1405&quot;,&quot;City&quot;:&quot;Langhus&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;PkgWeight&quot;:&quot;111&quot;,&quot;Height&quot;:&quot;10&quot;,&quot;Length&quot;:&quot;100&quot;,&quot;Width&quot;:&quot;100&quot;,&quot;PkgVol&quot;:&quot;10000&quot;,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1}]}]},&quot;options&quot;:{&quot;ProductChanged&quot;:1430}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsDefaultsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipmentsDefaultsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsDefaultsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsDefaultsPost'
             );
         }
 
@@ -5437,10 +5437,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -5526,16 +5526,16 @@ class ShipServerApi
      *
      * Reprint Labels
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsLabelReprintPost($actor_id, $body = null)
+    public function shipServerActorIDShipmentsLabelReprintPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShipmentsLabelReprintPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipmentsLabelReprintPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -5543,17 +5543,17 @@ class ShipServerApi
      *
      * Reprint Labels
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsLabelReprintPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsLabelReprintPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsLabelReprintPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsLabelReprintPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5597,15 +5597,15 @@ class ShipServerApi
      *
      * Reprint Labels
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsLabelReprintPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShipmentsLabelReprintPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipmentsLabelReprintPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipmentsLabelReprintPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5618,16 +5618,16 @@ class ShipServerApi
      *
      * Reprint Labels
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsLabelReprintPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsLabelReprintPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsLabelReprintPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsLabelReprintPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5655,18 +5655,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsLabelReprintPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ShpCSID&quot;:2} ,&quot;options&quot;:{&quot;Labels&quot;:&quot;PNG&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsLabelReprintPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipmentsLabelReprintPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsLabelReprintPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsLabelReprintPost'
             );
         }
 
@@ -5679,10 +5679,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -5768,16 +5768,16 @@ class ShipServerApi
      *
      * Transmit/manifest Shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsManifestPut($actor_id, $body = null)
+    public function shipServerActorIDShipmentsManifestPut($actorID, $body = null)
     {
-        $this->shipServerActorIDShipmentsManifestPutWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipmentsManifestPutWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -5785,17 +5785,17 @@ class ShipServerApi
      *
      * Transmit/manifest Shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsManifestPutWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsManifestPutWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsManifestPutRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsManifestPutRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5839,15 +5839,15 @@ class ShipServerApi
      *
      * Transmit/manifest Shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsManifestPutAsync($actor_id, $body = null)
+    public function shipServerActorIDShipmentsManifestPutAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipmentsManifestPutAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipmentsManifestPutAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5860,16 +5860,16 @@ class ShipServerApi
      *
      * Transmit/manifest Shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsManifestPutAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsManifestPutAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsManifestPutRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsManifestPutRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5897,18 +5897,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsManifestPut'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PUT:  {&quot;data&quot;:{&quot;ShipmentTags&quot;:[&quot;021602A9-F214-49B5-89BE-A40DC6E4CF55&quot;, &quot;5D534521-8152-4483-8ED7-B74FD1BBF8DD&quot;]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsManifestPutRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipmentsManifestPutRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsManifestPut'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsManifestPut'
             );
         }
 
@@ -5921,10 +5921,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -6010,16 +6010,16 @@ class ShipServerApi
      *
      * Submit/Print Shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsPost($actor_id, $body = null)
+    public function shipServerActorIDShipmentsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShipmentsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShipmentsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -6027,17 +6027,17 @@ class ShipServerApi
      *
      * Submit/Print Shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6081,15 +6081,15 @@ class ShipServerApi
      *
      * Submit/Print Shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShipmentsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShipmentsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShipmentsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6102,16 +6102,16 @@ class ShipServerApi
      *
      * Submit/Print Shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShipmentsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShipmentsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6139,18 +6139,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot;, } ], &quot;Lines&quot;: [ { &quot;LineWeight&quot;: 500, &quot;Pkgs&quot;: [ { &quot;ItemNo&quot;: 1 } ] } ] }, &quot;options&quot;: { &quot;TimeLog&quot;: 0, &quot;UseShippingRules&quot;: 0, &quot;Visibility&quot;: &quot;extended&quot;, &quot;Labels&quot;: &quot;ZPLGK&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShipmentsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsPost'
             );
         }
 
@@ -6163,10 +6163,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -6252,17 +6252,17 @@ class ShipServerApi
      *
      * Delete shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Optional - can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Optional - can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagDelete($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDelete($actorID, $shipmentTag, $body = null)
     {
-        $this->shipServerActorIDShipmentsShipmentTagDeleteWithHttpInfo($actor_id, $shipment_tag, $body);
+        $this->shipServerActorIDShipmentsShipmentTagDeleteWithHttpInfo($actorID, $shipmentTag, $body);
     }
 
     /**
@@ -6270,18 +6270,18 @@ class ShipServerApi
      *
      * Delete shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Optional - can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Optional - can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagDeleteWithHttpInfo($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDeleteWithHttpInfo($actorID, $shipmentTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDeleteRequest($actor_id, $shipment_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDeleteRequest($actorID, $shipmentTag, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6325,16 +6325,16 @@ class ShipServerApi
      *
      * Delete shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Optional - can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Optional - can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDeleteAsync($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDeleteAsync($actorID, $shipmentTag, $body = null)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagDeleteAsyncWithHttpInfo($actor_id, $shipment_tag, $body)
+        return $this->shipServerActorIDShipmentsShipmentTagDeleteAsyncWithHttpInfo($actorID, $shipmentTag, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6347,17 +6347,17 @@ class ShipServerApi
      *
      * Delete shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Optional - can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Optional - can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDeleteAsyncWithHttpInfo($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDeleteAsyncWithHttpInfo($actorID, $shipmentTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDeleteRequest($actor_id, $shipment_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDeleteRequest($actorID, $shipmentTag, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6385,25 +6385,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagDelete'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Optional - can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Optional - can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagDeleteRequest($actor_id, $shipment_tag, $body = null)
+    protected function shipServerActorIDShipmentsShipmentTagDeleteRequest($actorID, $shipmentTag, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagDelete'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagDelete'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagDelete'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagDelete'
             );
         }
 
@@ -6416,18 +6416,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -6513,17 +6513,17 @@ class ShipServerApi
      *
      * Update Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagDetailsPatch($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDetailsPatch($actorID, $shipmentTag, $body = null)
     {
-        $this->shipServerActorIDShipmentsShipmentTagDetailsPatchWithHttpInfo($actor_id, $shipment_tag, $body);
+        $this->shipServerActorIDShipmentsShipmentTagDetailsPatchWithHttpInfo($actorID, $shipmentTag, $body);
     }
 
     /**
@@ -6531,18 +6531,18 @@ class ShipServerApi
      *
      * Update Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagDetailsPatchWithHttpInfo($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDetailsPatchWithHttpInfo($actorID, $shipmentTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDetailsPatchRequest($actor_id, $shipment_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDetailsPatchRequest($actorID, $shipmentTag, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6586,16 +6586,16 @@ class ShipServerApi
      *
      * Update Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDetailsPatchAsync($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDetailsPatchAsync($actorID, $shipmentTag, $body = null)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagDetailsPatchAsyncWithHttpInfo($actor_id, $shipment_tag, $body)
+        return $this->shipServerActorIDShipmentsShipmentTagDetailsPatchAsyncWithHttpInfo($actorID, $shipmentTag, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6608,17 +6608,17 @@ class ShipServerApi
      *
      * Update Details
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDetailsPatchAsyncWithHttpInfo($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagDetailsPatchAsyncWithHttpInfo($actorID, $shipmentTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDetailsPatchRequest($actor_id, $shipment_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDetailsPatchRequest($actorID, $shipmentTag, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6646,25 +6646,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagDetailsPatch'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;GroupDisplayName&quot;:&quot;Customs Article&quot;,&quot;Rows&quot;:[{&quot;RowNo&quot;:1,&quot;LineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;Updated A for l1&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;Updated desc l1&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]},{&quot;RowNo&quot;:2,&quot;LineNo&quot;:2,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;A for l2&quot;,&quot;DisplayName&quot;:&quot;Article No&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;desc l2&quot;,&quot;DisplayName&quot;:&quot;Description of Goods&quot;}]}]},{&quot;GroupID&quot;:2,&quot;GroupDisplayName&quot;:&quot;Customs Information&quot;,&quot;Details&quot;:[{&quot;KindID&quot;:11,&quot;Value&quot;:&quot;Updated VAT Sender&quot;,&quot;DisplayName&quot;:&quot;Vat No (Sender)&quot;}]}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagDetailsPatchRequest($actor_id, $shipment_tag, $body = null)
+    protected function shipServerActorIDShipmentsShipmentTagDetailsPatchRequest($actorID, $shipmentTag, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagDetailsPatch'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagDetailsPatch'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagDetailsPatch'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagDetailsPatch'
             );
         }
 
@@ -6677,18 +6677,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -6774,16 +6774,16 @@ class ShipServerApi
      *
      * Get document list for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentListsGet($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentListsGet($actorID, $shipmentTag)
     {
-        $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetWithHttpInfo($actor_id, $shipment_tag);
+        $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetWithHttpInfo($actorID, $shipmentTag);
     }
 
     /**
@@ -6791,17 +6791,17 @@ class ShipServerApi
      *
      * Get document list for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentListsGetWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentListsGetWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetRequest($actorID, $shipmentTag);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6845,15 +6845,15 @@ class ShipServerApi
      *
      * Get document list for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentListsGetAsync($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentListsGetAsync($actorID, $shipmentTag)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+        return $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetAsyncWithHttpInfo($actorID, $shipmentTag)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6866,16 +6866,16 @@ class ShipServerApi
      *
      * Get document list for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentListsGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentListsGetAsyncWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentListsGetRequest($actorID, $shipmentTag);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6903,24 +6903,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagDocumentListsGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagDocumentListsGetRequest($actor_id, $shipment_tag)
+    protected function shipServerActorIDShipmentsShipmentTagDocumentListsGetRequest($actorID, $shipmentTag)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagDocumentListsGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagDocumentListsGet'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagDocumentListsGet'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagDocumentListsGet'
             );
         }
 
@@ -6933,18 +6933,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -7027,16 +7027,16 @@ class ShipServerApi
      *
      * Get documents for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentsGet($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentsGet($actorID, $shipmentTag)
     {
-        $this->shipServerActorIDShipmentsShipmentTagDocumentsGetWithHttpInfo($actor_id, $shipment_tag);
+        $this->shipServerActorIDShipmentsShipmentTagDocumentsGetWithHttpInfo($actorID, $shipmentTag);
     }
 
     /**
@@ -7044,17 +7044,17 @@ class ShipServerApi
      *
      * Get documents for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentsGetWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentsGetWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentsGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentsGetRequest($actorID, $shipmentTag);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7098,15 +7098,15 @@ class ShipServerApi
      *
      * Get documents for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentsGetAsync($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentsGetAsync($actorID, $shipmentTag)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagDocumentsGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+        return $this->shipServerActorIDShipmentsShipmentTagDocumentsGetAsyncWithHttpInfo($actorID, $shipmentTag)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7119,16 +7119,16 @@ class ShipServerApi
      *
      * Get documents for a shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagDocumentsGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagDocumentsGetAsyncWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentsGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagDocumentsGetRequest($actorID, $shipmentTag);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7156,24 +7156,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagDocumentsGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagDocumentsGetRequest($actor_id, $shipment_tag)
+    protected function shipServerActorIDShipmentsShipmentTagDocumentsGetRequest($actorID, $shipmentTag)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagDocumentsGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagDocumentsGet'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagDocumentsGet'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagDocumentsGet'
             );
         }
 
@@ -7186,18 +7186,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -7280,16 +7280,16 @@ class ShipServerApi
      *
      * Get existing shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagGet($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagGet($actorID, $shipmentTag)
     {
-        $this->shipServerActorIDShipmentsShipmentTagGetWithHttpInfo($actor_id, $shipment_tag);
+        $this->shipServerActorIDShipmentsShipmentTagGetWithHttpInfo($actorID, $shipmentTag);
     }
 
     /**
@@ -7297,17 +7297,17 @@ class ShipServerApi
      *
      * Get existing shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagGetWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagGetWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagGetRequest($actorID, $shipmentTag);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7351,15 +7351,15 @@ class ShipServerApi
      *
      * Get existing shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagGetAsync($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagGetAsync($actorID, $shipmentTag)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+        return $this->shipServerActorIDShipmentsShipmentTagGetAsyncWithHttpInfo($actorID, $shipmentTag)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7372,16 +7372,16 @@ class ShipServerApi
      *
      * Get existing shipment
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagGetAsyncWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagGetRequest($actorID, $shipmentTag);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7409,24 +7409,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagGetRequest($actor_id, $shipment_tag)
+    protected function shipServerActorIDShipmentsShipmentTagGetRequest($actorID, $shipmentTag)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagGet'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagGet'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagGet'
             );
         }
 
@@ -7439,18 +7439,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -7533,18 +7533,18 @@ class ShipServerApi
      *
      * Delete line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDelete($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDelete($actorID, $shipmentTag, $lineTag, $body = null)
     {
-        $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body);
+        $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteWithHttpInfo($actorID, $shipmentTag, $lineTag, $body);
     }
 
     /**
@@ -7552,19 +7552,19 @@ class ShipServerApi
      *
      * Delete line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteWithHttpInfo($actorID, $shipmentTag, $lineTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteRequest($actor_id, $shipment_tag, $line_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteRequest($actorID, $shipmentTag, $lineTag, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7608,17 +7608,17 @@ class ShipServerApi
      *
      * Delete line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteAsync($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteAsync($actorID, $shipmentTag, $lineTag, $body = null)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteAsyncWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body)
+        return $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteAsyncWithHttpInfo($actorID, $shipmentTag, $lineTag, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7631,18 +7631,18 @@ class ShipServerApi
      *
      * Delete line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteAsyncWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteAsyncWithHttpInfo($actorID, $shipmentTag, $lineTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteRequest($actor_id, $shipment_tag, $line_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteRequest($actorID, $shipmentTag, $lineTag, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7670,32 +7670,32 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteRequest($actor_id, $shipment_tag, $line_tag, $body = null)
+    protected function shipServerActorIDShipmentsShipmentTagLinesLineTagDeleteRequest($actorID, $shipmentTag, $lineTag, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
             );
         }
-        // verify the required parameter 'line_tag' is set
-        if ($line_tag === null || (is_array($line_tag) && count($line_tag) === 0)) {
+        // verify the required parameter 'lineTag' is set
+        if ($lineTag === null || (is_array($lineTag) && count($lineTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $line_tag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
+                'Missing the required parameter $lineTag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagDelete'
             );
         }
 
@@ -7708,26 +7708,26 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
         // path params
-        if ($line_tag !== null) {
+        if ($lineTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'lineTag' . '}',
-                ObjectSerializer::toPathValue($line_tag),
+                ObjectSerializer::toPathValue($lineTag),
                 $resourcePath
             );
         }
@@ -7813,18 +7813,18 @@ class ShipServerApi
      *
      * Update Line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatch($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatch($actorID, $shipmentTag, $lineTag, $body = null)
     {
-        $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body);
+        $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchWithHttpInfo($actorID, $shipmentTag, $lineTag, $body);
     }
 
     /**
@@ -7832,19 +7832,19 @@ class ShipServerApi
      *
      * Update Line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchWithHttpInfo($actorID, $shipmentTag, $lineTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchRequest($actor_id, $shipment_tag, $line_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchRequest($actorID, $shipmentTag, $lineTag, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7888,17 +7888,17 @@ class ShipServerApi
      *
      * Update Line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchAsync($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchAsync($actorID, $shipmentTag, $lineTag, $body = null)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchAsyncWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body)
+        return $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchAsyncWithHttpInfo($actorID, $shipmentTag, $lineTag, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7911,18 +7911,18 @@ class ShipServerApi
      *
      * Update Line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchAsyncWithHttpInfo($actor_id, $shipment_tag, $line_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchAsyncWithHttpInfo($actorID, $shipmentTag, $lineTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchRequest($actor_id, $shipment_tag, $line_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagLinesLineTagPatchRequest($actorID, $shipmentTag, $lineTag, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7950,32 +7950,32 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $line_tag Line Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $lineTag Line Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:5000,&quot;PkgWeight&quot;:5000,&quot;LineVol&quot;:1000000,&quot;PickupDt&quot;:&quot;2022-11-12T00:00:00&quot;,&quot;PkgVol&quot;:1000000,&quot;Loadmeter&quot;:20,&quot;GoodsTypeID&quot;:1,&quot;GoodsTypeName&quot;:&quot;Paket&quot;,&quot;RecycleTypeID&quot;:1,&quot;RecycleTypeName&quot;:&quot;EUR&quot;,&quot;RecycleTypeCode&quot;:&quot;EUR&quot;,&quot;GoodsTypeKey1&quot;:&quot;PC&quot;,&quot;GoodsTypeKey2&quot;:&quot;PKT&quot;,&quot;Pkgs&quot;:[{&quot;PkgCSID&quot;:122027,&quot;ItemNo&quot;:1}]},&quot;options&quot;:{&quot;Labels&quot;:&quot;none&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchRequest($actor_id, $shipment_tag, $line_tag, $body = null)
+    protected function shipServerActorIDShipmentsShipmentTagLinesLineTagPatchRequest($actorID, $shipmentTag, $lineTag, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
             );
         }
-        // verify the required parameter 'line_tag' is set
-        if ($line_tag === null || (is_array($line_tag) && count($line_tag) === 0)) {
+        // verify the required parameter 'lineTag' is set
+        if ($lineTag === null || (is_array($lineTag) && count($lineTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $line_tag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
+                'Missing the required parameter $lineTag when calling shipServerActorIDShipmentsShipmentTagLinesLineTagPatch'
             );
         }
 
@@ -7988,26 +7988,26 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
         // path params
-        if ($line_tag !== null) {
+        if ($lineTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'lineTag' . '}',
-                ObjectSerializer::toPathValue($line_tag),
+                ObjectSerializer::toPathValue($lineTag),
                 $resourcePath
             );
         }
@@ -8093,17 +8093,17 @@ class ShipServerApi
      *
      * New shipment line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesPost($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesPost($actorID, $shipmentTag, $body = null)
     {
-        $this->shipServerActorIDShipmentsShipmentTagLinesPostWithHttpInfo($actor_id, $shipment_tag, $body);
+        $this->shipServerActorIDShipmentsShipmentTagLinesPostWithHttpInfo($actorID, $shipmentTag, $body);
     }
 
     /**
@@ -8111,18 +8111,18 @@ class ShipServerApi
      *
      * New shipment line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesPostWithHttpInfo($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesPostWithHttpInfo($actorID, $shipmentTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagLinesPostRequest($actor_id, $shipment_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagLinesPostRequest($actorID, $shipmentTag, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8166,16 +8166,16 @@ class ShipServerApi
      *
      * New shipment line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesPostAsync($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesPostAsync($actorID, $shipmentTag, $body = null)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagLinesPostAsyncWithHttpInfo($actor_id, $shipment_tag, $body)
+        return $this->shipServerActorIDShipmentsShipmentTagLinesPostAsyncWithHttpInfo($actorID, $shipmentTag, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8188,17 +8188,17 @@ class ShipServerApi
      *
      * New shipment line
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagLinesPostAsyncWithHttpInfo($actor_id, $shipment_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagLinesPostAsyncWithHttpInfo($actorID, $shipmentTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagLinesPostRequest($actor_id, $shipment_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagLinesPostRequest($actorID, $shipmentTag, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8226,25 +8226,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagLinesPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;LineWeight&quot;:1000,&quot;PkgWeight&quot;:1000,&quot;Height&quot;:30,&quot;Length&quot;:30,&quot;Width&quot;:30,&quot;LineVol&quot;:27000,&quot;PkgVol&quot;:27000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;References&quot;:[{&quot;Kind&quot;:346,&quot;Value&quot;:&quot;False&quot;}]}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;oranges&quot;},{&quot;Kind&quot;:24,&quot;Value&quot;:&quot;org&quot;},{&quot;Kind&quot;:345,&quot;Value&quot;:&quot;False&quot;}]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagLinesPostRequest($actor_id, $shipment_tag, $body = null)
+    protected function shipServerActorIDShipmentsShipmentTagLinesPostRequest($actorID, $shipmentTag, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagLinesPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagLinesPost'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagLinesPost'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagLinesPost'
             );
         }
 
@@ -8257,18 +8257,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -8354,18 +8354,18 @@ class ShipServerApi
      *
      * Delete package
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $package_tag Package Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $packageTag Package Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete($actor_id, $shipment_tag, $package_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete($actorID, $shipmentTag, $packageTag, $body = null)
     {
-        $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteWithHttpInfo($actor_id, $shipment_tag, $package_tag, $body);
+        $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteWithHttpInfo($actorID, $shipmentTag, $packageTag, $body);
     }
 
     /**
@@ -8373,19 +8373,19 @@ class ShipServerApi
      *
      * Delete package
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $package_tag Package Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $packageTag Package Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteWithHttpInfo($actor_id, $shipment_tag, $package_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteWithHttpInfo($actorID, $shipmentTag, $packageTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteRequest($actor_id, $shipment_tag, $package_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteRequest($actorID, $shipmentTag, $packageTag, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8429,17 +8429,17 @@ class ShipServerApi
      *
      * Delete package
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $package_tag Package Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $packageTag Package Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteAsync($actor_id, $shipment_tag, $package_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteAsync($actorID, $shipmentTag, $packageTag, $body = null)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteAsyncWithHttpInfo($actor_id, $shipment_tag, $package_tag, $body)
+        return $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteAsyncWithHttpInfo($actorID, $shipmentTag, $packageTag, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8452,18 +8452,18 @@ class ShipServerApi
      *
      * Delete package
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $package_tag Package Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $packageTag Package Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteAsyncWithHttpInfo($actor_id, $shipment_tag, $package_tag, $body = null)
+    public function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteAsyncWithHttpInfo($actorID, $shipmentTag, $packageTag, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteRequest($actor_id, $shipment_tag, $package_tag, $body);
+        $request = $this->shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteRequest($actorID, $shipmentTag, $packageTag, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8491,32 +8491,32 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
-     * @param  string $package_tag Package Tag (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
+     * @param  string $packageTag Package Tag (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteRequest($actor_id, $shipment_tag, $package_tag, $body = null)
+    protected function shipServerActorIDShipmentsShipmentTagPackagesPackageTagDeleteRequest($actorID, $shipmentTag, $packageTag, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
             );
         }
-        // verify the required parameter 'package_tag' is set
-        if ($package_tag === null || (is_array($package_tag) && count($package_tag) === 0)) {
+        // verify the required parameter 'packageTag' is set
+        if ($packageTag === null || (is_array($packageTag) && count($packageTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $package_tag when calling shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
+                'Missing the required parameter $packageTag when calling shipServerActorIDShipmentsShipmentTagPackagesPackageTagDelete'
             );
         }
 
@@ -8529,26 +8529,26 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
         // path params
-        if ($package_tag !== null) {
+        if ($packageTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'packageTag' . '}',
-                ObjectSerializer::toPathValue($package_tag),
+                ObjectSerializer::toPathValue($packageTag),
                 $resourcePath
             );
         }
@@ -8634,16 +8634,16 @@ class ShipServerApi
      *
      * Get Tracking URL
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShipmentsShipmentTagTrackingURLGet($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagTrackingURLGet($actorID, $shipmentTag)
     {
-        $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetWithHttpInfo($actor_id, $shipment_tag);
+        $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetWithHttpInfo($actorID, $shipmentTag);
     }
 
     /**
@@ -8651,17 +8651,17 @@ class ShipServerApi
      *
      * Get Tracking URL
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShipmentsShipmentTagTrackingURLGetWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagTrackingURLGetWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetRequest($actorID, $shipmentTag);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8705,15 +8705,15 @@ class ShipServerApi
      *
      * Get Tracking URL
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagTrackingURLGetAsync($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagTrackingURLGetAsync($actorID, $shipmentTag)
     {
-        return $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+        return $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetAsyncWithHttpInfo($actorID, $shipmentTag)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8726,16 +8726,16 @@ class ShipServerApi
      *
      * Get Tracking URL
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShipmentsShipmentTagTrackingURLGetAsyncWithHttpInfo($actor_id, $shipment_tag)
+    public function shipServerActorIDShipmentsShipmentTagTrackingURLGetAsyncWithHttpInfo($actorID, $shipmentTag)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetRequest($actor_id, $shipment_tag);
+        $request = $this->shipServerActorIDShipmentsShipmentTagTrackingURLGetRequest($actorID, $shipmentTag);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8763,24 +8763,24 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShipmentsShipmentTagTrackingURLGet'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  string $shipment_tag Shipment Tag (required)
+     * @param  int $actorID Actor ID (required)
+     * @param  string $shipmentTag Shipment Tag (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShipmentsShipmentTagTrackingURLGetRequest($actor_id, $shipment_tag)
+    protected function shipServerActorIDShipmentsShipmentTagTrackingURLGetRequest($actorID, $shipmentTag)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShipmentsShipmentTagTrackingURLGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDShipmentsShipmentTagTrackingURLGet'
             );
         }
-        // verify the required parameter 'shipment_tag' is set
-        if ($shipment_tag === null || (is_array($shipment_tag) && count($shipment_tag) === 0)) {
+        // verify the required parameter 'shipmentTag' is set
+        if ($shipmentTag === null || (is_array($shipmentTag) && count($shipmentTag) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $shipment_tag when calling shipServerActorIDShipmentsShipmentTagTrackingURLGet'
+                'Missing the required parameter $shipmentTag when calling shipServerActorIDShipmentsShipmentTagTrackingURLGet'
             );
         }
 
@@ -8793,18 +8793,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($shipment_tag !== null) {
+        if ($shipmentTag !== null) {
             $resourcePath = str_replace(
                 '{' . 'shipmentTag' . '}',
-                ObjectSerializer::toPathValue($shipment_tag),
+                ObjectSerializer::toPathValue($shipmentTag),
                 $resourcePath
             );
         }
@@ -8887,16 +8887,16 @@ class ShipServerApi
      *
      * Save shipping rules
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDShippingRulesPost($actor_id, $body = null)
+    public function shipServerActorIDShippingRulesPost($actorID, $body = null)
     {
-        $this->shipServerActorIDShippingRulesPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDShippingRulesPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -8904,17 +8904,17 @@ class ShipServerApi
      *
      * Save shipping rules
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDShippingRulesPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShippingRulesPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShippingRulesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShippingRulesPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8958,15 +8958,15 @@ class ShipServerApi
      *
      * Save shipping rules
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShippingRulesPostAsync($actor_id, $body = null)
+    public function shipServerActorIDShippingRulesPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDShippingRulesPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDShippingRulesPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8979,16 +8979,16 @@ class ShipServerApi
      *
      * Save shipping rules
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDShippingRulesPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDShippingRulesPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDShippingRulesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDShippingRulesPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9016,18 +9016,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDShippingRulesPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;ShippingRules&quot;: &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxDU1I+DQoJPFNlcnZpY2VMZXZlbHM+DQoJCTxTZXJ2aWNlTGV2ZWwgbmFtZT0iU3RhbmRhcmQiPg0KCQkJPFByb2R1Y3RzPg0KCQkJCTxQcm9kdWN0IG5hbWU9IkJ1ZCIgY29uY2VwdGlkPSI3MDYiIGNvbW1lbnQ9IkdCIiByYW5rPSIxMDAiPg0KCQkJCQk8VmFsaWRhdGlvblJ1bGVzPg0KCQkJCQkJPFZhbGlkYXRpb25SdWxlIG5hbWU9ImZsb2F0bGltaXRzIiBtaW49IjEwMCIgbWF4PSIxMDAwIiBmaWVsZD0iZmxkX0xMZW5ndGgiLz4NCgkJCQkJPC9WYWxpZGF0aW9uUnVsZXM+DQoJCQkJPC9Qcm9kdWN0Pg0KCQkJCTxQcm9kdWN0IG5hbWU9IlBhbGwiIGNvbmNlcHRpZD0iNzA4IiBjb21tZW50PSJHQiIgcm Fuaz0iNTAiPg0KCQkJCQk8UG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJCTxQb3N0Y29kZVZhbGlkYXRpb24gY291bnRyeT0iTk8iIGV4Y2x1ZGU9IjAiIHR5cGU9Ik5PIj4NCgkJCQkJCQk8UmFuZ2UgbWluPSIwNTU1IiBtYXg9IiIvPg0KCQkJCQkJPC9Qb3N0Y29kZVZhbGlkYXRpb24+DQoJCQkJCTwvUG9zdGNvZGVWYWxpZGF0aW9ucz4NCgkJCQkJPFZhbGlkYXRpb25SdWxlcz4NCgkJCQkJCTxWYWxpZGF0aW9uUnVsZSBuYW1lPSJjb3VudHJ5IiBhbGxvd2NvdW50cmllcz0iTk8iIGZpZWxkPSJmbGRfQWRyQ291bnRyeSIvPg0KCQkJCQk8L1ZhbGlkYXRpb25SdWxlcz4NCgkJCQk8L1Byb2R1Y3Q+DQoJCQk8L1Byb2R1Y3RzPg0KCQkJPEFsbG9jYXRpb25SdWxlcz4NCgkJCQk8QWxsb2NhdGlvblJ1bGUgdHlwZT0iaGlnaGVzdHJhbmsiLz4NCgkJCTwvQWxsb2NhdGlvblJ1bGVzPg0KCQk8L1NlcnZpY2VMZXZlbD4NCgk8L1NlcnZpY2VMZXZlbHM+DQo8L0NTUj4NCg&quot; } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDShippingRulesPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDShippingRulesPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDShippingRulesPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDShippingRulesPost'
             );
         }
 
@@ -9040,10 +9040,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -9129,15 +9129,15 @@ class ShipServerApi
      *
      * Get stacks
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDStacksGet($actor_id)
+    public function shipServerActorIDStacksGet($actorID)
     {
-        $this->shipServerActorIDStacksGetWithHttpInfo($actor_id);
+        $this->shipServerActorIDStacksGetWithHttpInfo($actorID);
     }
 
     /**
@@ -9145,16 +9145,16 @@ class ShipServerApi
      *
      * Get stacks
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDStacksGetWithHttpInfo($actor_id)
+    public function shipServerActorIDStacksGetWithHttpInfo($actorID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksGetRequest($actor_id);
+        $request = $this->shipServerActorIDStacksGetRequest($actorID);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9198,14 +9198,14 @@ class ShipServerApi
      *
      * Get stacks
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksGetAsync($actor_id)
+    public function shipServerActorIDStacksGetAsync($actorID)
     {
-        return $this->shipServerActorIDStacksGetAsyncWithHttpInfo($actor_id)
+        return $this->shipServerActorIDStacksGetAsyncWithHttpInfo($actorID)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9218,15 +9218,15 @@ class ShipServerApi
      *
      * Get stacks
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksGetAsyncWithHttpInfo($actor_id)
+    public function shipServerActorIDStacksGetAsyncWithHttpInfo($actorID)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksGetRequest($actor_id);
+        $request = $this->shipServerActorIDStacksGetRequest($actorID);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9254,17 +9254,17 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDStacksGet'
      *
-     * @param  int $actor_id Actor ID (required)
+     * @param  int $actorID Actor ID (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDStacksGetRequest($actor_id)
+    protected function shipServerActorIDStacksGetRequest($actorID)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDStacksGet'
+                'Missing the required parameter $actorID when calling shipServerActorIDStacksGet'
             );
         }
 
@@ -9277,10 +9277,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -9363,16 +9363,16 @@ class ShipServerApi
      *
      * Create stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDStacksPost($actor_id, $body = null)
+    public function shipServerActorIDStacksPost($actorID, $body = null)
     {
-        $this->shipServerActorIDStacksPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDStacksPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -9380,17 +9380,17 @@ class ShipServerApi
      *
      * Create stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDStacksPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDStacksPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDStacksPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9434,15 +9434,15 @@ class ShipServerApi
      *
      * Create stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksPostAsync($actor_id, $body = null)
+    public function shipServerActorIDStacksPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDStacksPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDStacksPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9455,16 +9455,16 @@ class ShipServerApi
      *
      * Create stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDStacksPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDStacksPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9492,18 +9492,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDStacksPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;StackName&quot;: &quot;TestStack&quot;, &quot;SubcarrierConceptID&quot;: 22},&quot;options&quot;: {}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDStacksPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDStacksPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDStacksPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDStacksPost'
             );
         }
 
@@ -9516,10 +9516,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -9605,16 +9605,16 @@ class ShipServerApi
      *
      * Move shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDStacksShipmentsPatch($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPatch($actorID, $body = null)
     {
-        $this->shipServerActorIDStacksShipmentsPatchWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDStacksShipmentsPatchWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -9622,17 +9622,17 @@ class ShipServerApi
      *
      * Move shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDStacksShipmentsPatchWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPatchWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksShipmentsPatchRequest($actor_id, $body);
+        $request = $this->shipServerActorIDStacksShipmentsPatchRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9676,15 +9676,15 @@ class ShipServerApi
      *
      * Move shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksShipmentsPatchAsync($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPatchAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDStacksShipmentsPatchAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDStacksShipmentsPatchAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9697,16 +9697,16 @@ class ShipServerApi
      *
      * Move shipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksShipmentsPatchAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPatchAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksShipmentsPatchRequest($actor_id, $body);
+        $request = $this->shipServerActorIDStacksShipmentsPatchRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9734,18 +9734,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDStacksShipmentsPatch'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request PATCH: {&quot;data&quot;:{&quot;StackCSID&quot;:156,&quot;ShipmentTags&quot;:[&quot;6D48DB14-5DA2-40EB-9383-FFDDE6347F4F&quot;]},&quot;options&quot;:{}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDStacksShipmentsPatchRequest($actor_id, $body = null)
+    protected function shipServerActorIDStacksShipmentsPatchRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDStacksShipmentsPatch'
+                'Missing the required parameter $actorID when calling shipServerActorIDStacksShipmentsPatch'
             );
         }
 
@@ -9758,10 +9758,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -9847,16 +9847,16 @@ class ShipServerApi
      *
      * Get stackshipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDStacksShipmentsPost($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDStacksShipmentsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDStacksShipmentsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -9864,17 +9864,17 @@ class ShipServerApi
      *
      * Get stackshipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDStacksShipmentsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksShipmentsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDStacksShipmentsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9918,15 +9918,15 @@ class ShipServerApi
      *
      * Get stackshipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksShipmentsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDStacksShipmentsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDStacksShipmentsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9939,16 +9939,16 @@ class ShipServerApi
      *
      * Get stackshipments
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksShipmentsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDStacksShipmentsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksShipmentsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDStacksShipmentsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9976,18 +9976,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDStacksShipmentsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot; : {&quot;StackCSID&quot;: 133}} or {&quot;data&quot; : {&quot;SubcarrierCSID&quot;: 12}} or {&quot;data&quot; : {&quot;CarrierCSID&quot;: 22}} see doc in link (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDStacksShipmentsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDStacksShipmentsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDStacksShipmentsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDStacksShipmentsPost'
             );
         }
 
@@ -10000,10 +10000,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -10089,17 +10089,17 @@ class ShipServerApi
      *
      * Delete stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDStacksStackIDDelete($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDDelete($actorID, $stackID, $body = null)
     {
-        $this->shipServerActorIDStacksStackIDDeleteWithHttpInfo($actor_id, $stack_id, $body);
+        $this->shipServerActorIDStacksStackIDDeleteWithHttpInfo($actorID, $stackID, $body);
     }
 
     /**
@@ -10107,18 +10107,18 @@ class ShipServerApi
      *
      * Delete stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDStacksStackIDDeleteWithHttpInfo($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDDeleteWithHttpInfo($actorID, $stackID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksStackIDDeleteRequest($actor_id, $stack_id, $body);
+        $request = $this->shipServerActorIDStacksStackIDDeleteRequest($actorID, $stackID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10162,16 +10162,16 @@ class ShipServerApi
      *
      * Delete stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksStackIDDeleteAsync($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDDeleteAsync($actorID, $stackID, $body = null)
     {
-        return $this->shipServerActorIDStacksStackIDDeleteAsyncWithHttpInfo($actor_id, $stack_id, $body)
+        return $this->shipServerActorIDStacksStackIDDeleteAsyncWithHttpInfo($actorID, $stackID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10184,17 +10184,17 @@ class ShipServerApi
      *
      * Delete stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksStackIDDeleteAsyncWithHttpInfo($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDDeleteAsyncWithHttpInfo($actorID, $stackID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksStackIDDeleteRequest($actor_id, $stack_id, $body);
+        $request = $this->shipServerActorIDStacksStackIDDeleteRequest($actorID, $stackID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10222,25 +10222,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDStacksStackIDDelete'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Can be empty (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Can be empty (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDStacksStackIDDeleteRequest($actor_id, $stack_id, $body = null)
+    protected function shipServerActorIDStacksStackIDDeleteRequest($actorID, $stackID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDStacksStackIDDelete'
+                'Missing the required parameter $actorID when calling shipServerActorIDStacksStackIDDelete'
             );
         }
-        // verify the required parameter 'stack_id' is set
-        if ($stack_id === null || (is_array($stack_id) && count($stack_id) === 0)) {
+        // verify the required parameter 'stackID' is set
+        if ($stackID === null || (is_array($stackID) && count($stackID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stack_id when calling shipServerActorIDStacksStackIDDelete'
+                'Missing the required parameter $stackID when calling shipServerActorIDStacksStackIDDelete'
             );
         }
 
@@ -10253,18 +10253,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($stack_id !== null) {
+        if ($stackID !== null) {
             $resourcePath = str_replace(
                 '{' . 'stackID' . '}',
-                ObjectSerializer::toPathValue($stack_id),
+                ObjectSerializer::toPathValue($stackID),
                 $resourcePath
             );
         }
@@ -10350,17 +10350,17 @@ class ShipServerApi
      *
      * Transmit stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDStacksStackIDManifestPut($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDManifestPut($actorID, $stackID, $body = null)
     {
-        $this->shipServerActorIDStacksStackIDManifestPutWithHttpInfo($actor_id, $stack_id, $body);
+        $this->shipServerActorIDStacksStackIDManifestPutWithHttpInfo($actorID, $stackID, $body);
     }
 
     /**
@@ -10368,18 +10368,18 @@ class ShipServerApi
      *
      * Transmit stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDStacksStackIDManifestPutWithHttpInfo($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDManifestPutWithHttpInfo($actorID, $stackID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksStackIDManifestPutRequest($actor_id, $stack_id, $body);
+        $request = $this->shipServerActorIDStacksStackIDManifestPutRequest($actorID, $stackID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10423,16 +10423,16 @@ class ShipServerApi
      *
      * Transmit stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksStackIDManifestPutAsync($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDManifestPutAsync($actorID, $stackID, $body = null)
     {
-        return $this->shipServerActorIDStacksStackIDManifestPutAsyncWithHttpInfo($actor_id, $stack_id, $body)
+        return $this->shipServerActorIDStacksStackIDManifestPutAsyncWithHttpInfo($actorID, $stackID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10445,17 +10445,17 @@ class ShipServerApi
      *
      * Transmit stack
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDStacksStackIDManifestPutAsyncWithHttpInfo($actor_id, $stack_id, $body = null)
+    public function shipServerActorIDStacksStackIDManifestPutAsyncWithHttpInfo($actorID, $stackID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDStacksStackIDManifestPutRequest($actor_id, $stack_id, $body);
+        $request = $this->shipServerActorIDStacksStackIDManifestPutRequest($actorID, $stackID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10483,25 +10483,25 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDStacksStackIDManifestPut'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  int $stack_id Stack ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  int $stackID Stack ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: { &quot;data&quot;: { &quot;StackCSID&quot;: &quot;36437&quot; }} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDStacksStackIDManifestPutRequest($actor_id, $stack_id, $body = null)
+    protected function shipServerActorIDStacksStackIDManifestPutRequest($actorID, $stackID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDStacksStackIDManifestPut'
+                'Missing the required parameter $actorID when calling shipServerActorIDStacksStackIDManifestPut'
             );
         }
-        // verify the required parameter 'stack_id' is set
-        if ($stack_id === null || (is_array($stack_id) && count($stack_id) === 0)) {
+        // verify the required parameter 'stackID' is set
+        if ($stackID === null || (is_array($stackID) && count($stackID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $stack_id when calling shipServerActorIDStacksStackIDManifestPut'
+                'Missing the required parameter $stackID when calling shipServerActorIDStacksStackIDManifestPut'
             );
         }
 
@@ -10514,18 +10514,18 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
         // path params
-        if ($stack_id !== null) {
+        if ($stackID !== null) {
             $resourcePath = str_replace(
                 '{' . 'stackID' . '}',
-                ObjectSerializer::toPathValue($stack_id),
+                ObjectSerializer::toPathValue($stackID),
                 $resourcePath
             );
         }
@@ -10611,16 +10611,16 @@ class ShipServerApi
      *
      * Submit order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDSubmitOrderPost($actor_id, $body = null)
+    public function shipServerActorIDSubmitOrderPost($actorID, $body = null)
     {
-        $this->shipServerActorIDSubmitOrderPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDSubmitOrderPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -10628,17 +10628,17 @@ class ShipServerApi
      *
      * Submit order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDSubmitOrderPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDSubmitOrderPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDSubmitOrderPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDSubmitOrderPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10682,15 +10682,15 @@ class ShipServerApi
      *
      * Submit order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDSubmitOrderPostAsync($actor_id, $body = null)
+    public function shipServerActorIDSubmitOrderPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDSubmitOrderPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDSubmitOrderPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10703,16 +10703,16 @@ class ShipServerApi
      *
      * Submit order
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDSubmitOrderPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDSubmitOrderPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDSubmitOrderPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDSubmitOrderPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10740,18 +10740,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDSubmitOrderPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Kind&quot;:1,&quot;ShpCSID&quot;:524,&quot;OrderNo&quot;:&quot;772157949528&quot;,&quot;Lines&quot;:[{&quot;Length&quot;:150,&quot;Height&quot;:100,&quot;PkgWeight&quot;:130,&quot;Width&quot;:100,&quot;PkgVol&quot;:1500000,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:1,&quot;PkgNo&quot;:&quot;&quot;}]}],&quot;DetailGroups&quot;:[{&quot;GroupID&quot;:1,&quot;Rows&quot;:[{&quot;GoodsLineNo&quot;:1,&quot;Details&quot;:[{&quot;KindID&quot;:1,&quot;Value&quot;:&quot;2102421501404NYE460&quot;},{&quot;KindID&quot;:2,&quot;Value&quot;:&quot;4.24&quot;},{&quot;KindID&quot;:4,&quot;Value&quot;:&quot;CN&quot;},{&quot;KindID&quot;:5,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:6,&quot;Value&quot;:&quot;.13&quot;},{&quot;KindID&quot;:7,&quot;Value&quot;:&quot;VL TONAL EMBROIDERY ENTRY TEE&quot;},{&quot;KindID&quot;:9,&quot;Value&quot;:&quot;1&quot;},{&quot;KindID&quot;:10,&quot;Value&quot;:&quot;34.99&quot;},{&quot;KindID&quot;:17,&quot;Value&quot;:&quot;EUR&quot;},{&quot;KindID&quot;:18,&quot;Value&quot;:&quot;6109100010&quot;},{&quot;KindID&quot;:186,&quot;Value&quot;:&quot;T.SHIRT&quot;},{&quot;KindID&quot;:192,&quot;Value&quot;:&quot;N&quot;}]}]}],&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;AutoReceiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0360&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;POPostCode&quot;:&quot;0580&quot;,&quot;POCity&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;67 06 49 91&quot;,&quot;Mobile&quot;:&quot;12341234&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;ContactCSID&quot;:5299935,&quot;Fax&quot;:&quot;67 06 49 92&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Country&quot;:&quot;NORWAY&quot;,&quot;CountryCodeISO3&quot;:&quot;NOR&quot;,&quot;CountryISOID&quot;:578}],&quot;References&quot;:[{&quot;Kind&quot;:7,&quot;Value&quot;:&quot;ECOM12364313&quot;}]},&quot;options&quot;:{&quot;ReturnShipmentServiceLevel&quot;:&quot;Return&quot;,&quot;Labels&quot;:&quot;PNG&quot;,&quot;UseCopy&quot;:0,&quot;Visibility&quot;:&quot;extended&quot;,&quot;ReturnShipmentFirst&quot;:0}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDSubmitOrderPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDSubmitOrderPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDSubmitOrderPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDSubmitOrderPost'
             );
         }
 
@@ -10764,10 +10764,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -10853,16 +10853,16 @@ class ShipServerApi
      *
      * Time slot allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDTimeSlotAllocationsPost($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotAllocationsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDTimeSlotAllocationsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDTimeSlotAllocationsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -10870,17 +10870,17 @@ class ShipServerApi
      *
      * Time slot allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDTimeSlotAllocationsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotAllocationsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDTimeSlotAllocationsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDTimeSlotAllocationsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10924,15 +10924,15 @@ class ShipServerApi
      *
      * Time slot allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDTimeSlotAllocationsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotAllocationsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDTimeSlotAllocationsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDTimeSlotAllocationsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10945,16 +10945,16 @@ class ShipServerApi
      *
      * Time slot allocations
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDTimeSlotAllocationsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotAllocationsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDTimeSlotAllocationsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDTimeSlotAllocationsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10982,18 +10982,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDTimeSlotAllocationsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;_-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots__&quot;,&quot;TimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDTimeSlotAllocationsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDTimeSlotAllocationsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDTimeSlotAllocationsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDTimeSlotAllocationsPost'
             );
         }
 
@@ -11006,10 +11006,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -11095,16 +11095,16 @@ class ShipServerApi
      *
      * Get time slots
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDTimeSlotsPost($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDTimeSlotsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDTimeSlotsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -11112,17 +11112,17 @@ class ShipServerApi
      *
      * Get time slots
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDTimeSlotsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDTimeSlotsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDTimeSlotsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11166,15 +11166,15 @@ class ShipServerApi
      *
      * Get time slots
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDTimeSlotsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDTimeSlotsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDTimeSlotsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11187,16 +11187,16 @@ class ShipServerApi
      *
      * Get time slots
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDTimeSlotsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDTimeSlotsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDTimeSlotsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDTimeSlotsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11224,18 +11224,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDTimeSlotsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdConceptID&quot;:5799,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test &quot;,&quot;Attention&quot;:&quot;Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0580&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;CountryCode&quot;:&quot;NO&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Phone&quot;:&quot;00000000&quot;},{&quot;Kind&quot;:2,&quot;Attention&quot;:&quot;Att Sender&quot;,&quot;Name1&quot;:&quot;Sender for all&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;0192&quot;,&quot;City&quot;:&quot;OSLO&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;CountryCode&quot;:&quot;NO&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;EarliestPickup&quot;:&quot;2021-06-16T06:00&quot;,&quot;LatestPickup&quot;:&quot;2021-06-16T21:00&quot;,&quot;TimeLog&quot;:1}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDTimeSlotsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDTimeSlotsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDTimeSlotsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDTimeSlotsPost'
             );
         }
 
@@ -11248,10 +11248,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -11337,16 +11337,16 @@ class ShipServerApi
      *
      * Check sender/receiver addresses.
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDValidRoutesPost($actor_id, $body = null)
+    public function shipServerActorIDValidRoutesPost($actorID, $body = null)
     {
-        $this->shipServerActorIDValidRoutesPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDValidRoutesPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -11354,17 +11354,17 @@ class ShipServerApi
      *
      * Check sender/receiver addresses.
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDValidRoutesPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDValidRoutesPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDValidRoutesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDValidRoutesPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11408,15 +11408,15 @@ class ShipServerApi
      *
      * Check sender/receiver addresses.
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDValidRoutesPostAsync($actor_id, $body = null)
+    public function shipServerActorIDValidRoutesPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDValidRoutesPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDValidRoutesPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11429,16 +11429,16 @@ class ShipServerApi
      *
      * Check sender/receiver addresses.
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDValidRoutesPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDValidRoutesPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDValidRoutesPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDValidRoutesPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11466,18 +11466,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDValidRoutesPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST:    { &quot;data&quot;: { &quot;Kind&quot;: 1, &quot;ProdConceptID&quot;: 2816, &quot;Addresses&quot;: [ { &quot;Kind&quot;: 1, &quot;Name1&quot;: &quot;Name Receiver&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; }, { &quot;Kind&quot;: 2, &quot;Name1&quot;: &quot;Name sender&quot;, &quot;Street1&quot;: &quot;Street 10&quot;, &quot;PostCode&quot;: &quot;11848&quot;, &quot;City&quot;: &quot;Göteborg&quot;, &quot;Mobile&quot;: &quot;00000000&quot;, &quot;CountryCode&quot;: &quot;SE&quot;, &quot;Email&quot;: &quot;a@noexitingqwerty.nnn&quot; } ] } } (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDValidRoutesPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDValidRoutesPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDValidRoutesPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDValidRoutesPost'
             );
         }
 
@@ -11490,10 +11490,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -11579,16 +11579,16 @@ class ShipServerApi
      *
      * Void Time slot
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDVoidTimeSlotPost($actor_id, $body = null)
+    public function shipServerActorIDVoidTimeSlotPost($actorID, $body = null)
     {
-        $this->shipServerActorIDVoidTimeSlotPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDVoidTimeSlotPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -11596,17 +11596,17 @@ class ShipServerApi
      *
      * Void Time slot
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDVoidTimeSlotPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDVoidTimeSlotPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDVoidTimeSlotPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDVoidTimeSlotPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11650,15 +11650,15 @@ class ShipServerApi
      *
      * Void Time slot
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDVoidTimeSlotPostAsync($actor_id, $body = null)
+    public function shipServerActorIDVoidTimeSlotPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDVoidTimeSlotPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDVoidTimeSlotPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11671,16 +11671,16 @@ class ShipServerApi
      *
      * Void Time slot
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDVoidTimeSlotPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDVoidTimeSlotPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDVoidTimeSlotPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDVoidTimeSlotPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11708,18 +11708,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDVoidTimeSlotPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;:{&quot;ProdCSID&quot;:113,&quot;Addresses&quot;:[{&quot;Kind&quot;:1,&quot;Name1&quot;:&quot;Test Receiver&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;11848&quot;,&quot;City&quot;:&quot;Göteborg&quot;,&quot;CustNo&quot;:&quot;5&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;ERPRef&quot;:&quot;5&quot;},{&quot;Kind&quot;:10,&quot;Name1&quot;:&quot;Sender Test&quot;,&quot;Street1&quot;:&quot;Street 10&quot;,&quot;PostCode&quot;:&quot;43891&quot;,&quot;Mobile&quot;:&quot;00000000&quot;,&quot;Phone&quot;:&quot;004007123456&quot;,&quot;City&quot;:&quot;Landvetter&quot;,&quot;CustNo&quot;:&quot;3425964&quot;,&quot;CountryCode&quot;:&quot;SE&quot;,&quot;Country&quot;:&quot;Sweden&quot;,&quot;Email&quot;:&quot;a@noexitingqwerty.nnn&quot;}],&quot;Lines&quot;:[{&quot;LineWeight&quot;:4000,&quot;PkgWeight&quot;:4000,&quot;Width&quot;:10,&quot;Height&quot;:400,&quot;Length&quot;:10,&quot;Pkgs&quot;:[{&quot;ItemNo&quot;:3}],&quot;References&quot;:[{&quot;Kind&quot;:23,&quot;Value&quot;:&quot;cool stuff&quot;}]}]},&quot;options&quot;:{&quot;Token&quot;:&quot;-1_0_7892_7961_4593_5599_0_0__0__12/30/1899_12/30/1899_TimeSlots_&quot;,&quot;AllocatedTimeSlotToken&quot;:&quot;...&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDVoidTimeSlotPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDVoidTimeSlotPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDVoidTimeSlotPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDVoidTimeSlotPost'
             );
         }
 
@@ -11732,10 +11732,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }
@@ -11821,16 +11821,16 @@ class ShipServerApi
      *
      * Get waybills
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function shipServerActorIDWaybillsPost($actor_id, $body = null)
+    public function shipServerActorIDWaybillsPost($actorID, $body = null)
     {
-        $this->shipServerActorIDWaybillsPostWithHttpInfo($actor_id, $body);
+        $this->shipServerActorIDWaybillsPostWithHttpInfo($actorID, $body);
     }
 
     /**
@@ -11838,17 +11838,17 @@ class ShipServerApi
      *
      * Get waybills
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \LUSHDigital\NShiftPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function shipServerActorIDWaybillsPostWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDWaybillsPostWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDWaybillsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDWaybillsPostRequest($actorID, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -11892,15 +11892,15 @@ class ShipServerApi
      *
      * Get waybills
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDWaybillsPostAsync($actor_id, $body = null)
+    public function shipServerActorIDWaybillsPostAsync($actorID, $body = null)
     {
-        return $this->shipServerActorIDWaybillsPostAsyncWithHttpInfo($actor_id, $body)
+        return $this->shipServerActorIDWaybillsPostAsyncWithHttpInfo($actorID, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -11913,16 +11913,16 @@ class ShipServerApi
      *
      * Get waybills
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function shipServerActorIDWaybillsPostAsyncWithHttpInfo($actor_id, $body = null)
+    public function shipServerActorIDWaybillsPostAsyncWithHttpInfo($actorID, $body = null)
     {
         $returnType = '';
-        $request = $this->shipServerActorIDWaybillsPostRequest($actor_id, $body);
+        $request = $this->shipServerActorIDWaybillsPostRequest($actorID, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -11950,18 +11950,18 @@ class ShipServerApi
     /**
      * Create request for operation 'shipServerActorIDWaybillsPost'
      *
-     * @param  int $actor_id Actor ID (required)
-     * @param  \Swagger\Client\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
+     * @param  int $actorID Actor ID (required)
+     * @param  \LUSHDigital\NShiftPHP\Model\RequestBody $body Sample request POST: {&quot;data&quot;: {&quot;BookingNo&quot;: &quot;255664&quot;,&quot;CustomsRefNo&quot;: &quot;Norway&quot;,&quot;ContentsPallet&quot;: &quot;&quot;,&quot;HalfPallet&quot;: &quot;1&quot;,&quot;QuarterPallet&quot;: &quot;&quot;,&quot;Oversize&quot;: &quot;&quot;,&quot;Other&quot;: &quot;&quot;,&quot;SendersPlace&quot;: &quot;Hillerød&quot;,&quot;Date&quot;: &quot;17.10.2016&quot;,&quot;Sender&quot;: &quot;Test ApS, Frydenborgvej 32, 3400 Hillerød, Denmark&quot;,&quot;CustNo&quot;: &quot;10432061&quot;,&quot;DestinationCountryTerminal&quot;: &quot;Norway, POSTNORD&quot;,&quot;AgentNorge&quot;: &quot;&quot;,&quot;AgentReceiver&quot;: &quot;Test, 0484 Oslo, Norway&quot;,&quot;DestinationCountry&quot;: &quot;Norway&quot;,&quot;BusinessBulksplit.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.TotalNetWeight&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;BusinessBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.ColliNo&quot;: &quot;29&quot;,&quot;MyPackBulksplit.TotalNetWeight&quot;: &quot;13&quot;,&quot;MyPackBulksplit.AddedServices.0.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedService.s1.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.Type&quot;: &quot;&quot;,&quot;MyPackBulksplit.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;Pallet.ColliNo&quot;: &quot;&quot;,&quot;Pallet.TotalNetWeight&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.0.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.1.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.2.ColliNo&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.Type&quot;: &quot;&quot;,&quot;Pallet.AddedServices.3.ColliNo&quot;: &quot;&quot;,&quot;PackageIDPallet&quot;: &quot;&quot;,&quot;BatchCSID&quot;: 4948000,&quot;CountryCode&quot;: &quot;NO&quot;}} (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function shipServerActorIDWaybillsPostRequest($actor_id, $body = null)
+    protected function shipServerActorIDWaybillsPostRequest($actorID, $body = null)
     {
-        // verify the required parameter 'actor_id' is set
-        if ($actor_id === null || (is_array($actor_id) && count($actor_id) === 0)) {
+        // verify the required parameter 'actorID' is set
+        if ($actorID === null || (is_array($actorID) && count($actorID) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $actor_id when calling shipServerActorIDWaybillsPost'
+                'Missing the required parameter $actorID when calling shipServerActorIDWaybillsPost'
             );
         }
 
@@ -11974,10 +11974,10 @@ class ShipServerApi
 
 
         // path params
-        if ($actor_id !== null) {
+        if ($actorID !== null) {
             $resourcePath = str_replace(
                 '{' . 'actorID' . '}',
-                ObjectSerializer::toPathValue($actor_id),
+                ObjectSerializer::toPathValue($actorID),
                 $resourcePath
             );
         }

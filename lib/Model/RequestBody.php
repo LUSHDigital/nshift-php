@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  LUSHDigital\NShiftPHP
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace LUSHDigital\NShiftPHP\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \LUSHDigital\NShiftPHP\ObjectSerializer;
 
 /**
  * RequestBody Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  LUSHDigital\NShiftPHP
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -56,9 +56,9 @@ class RequestBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'data' => 'map[string,\Swagger\Client\Model\JToken]',
-'options' => 'map[string,\Swagger\Client\Model\JToken]',
-'configuration' => 'map[string,\Swagger\Client\Model\JToken]'    ];
+        'data' => 'map[string,\LUSHDigital\NShiftPHP\Model\JToken]',
+'options' => 'map[string,\LUSHDigital\NShiftPHP\Model\JToken]',
+'configuration' => 'map[string,\LUSHDigital\NShiftPHP\Model\JToken]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -211,7 +211,7 @@ class RequestBody implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return map[string,\Swagger\Client\Model\JToken]
+     * @return map[string,\LUSHDigital\NShiftPHP\Model\JToken]
      */
     public function getData()
     {
@@ -221,7 +221,7 @@ class RequestBody implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param map[string,\Swagger\Client\Model\JToken] $data data
+     * @param map[string,\LUSHDigital\NShiftPHP\Model\JToken] $data data
      *
      * @return $this
      */
@@ -235,7 +235,7 @@ class RequestBody implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return map[string,\Swagger\Client\Model\JToken]
+     * @return map[string,\LUSHDigital\NShiftPHP\Model\JToken]
      */
     public function getOptions()
     {
@@ -245,7 +245,7 @@ class RequestBody implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param map[string,\Swagger\Client\Model\JToken] $options options
+     * @param map[string,\LUSHDigital\NShiftPHP\Model\JToken] $options options
      *
      * @return $this
      */
@@ -259,7 +259,7 @@ class RequestBody implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return map[string,\Swagger\Client\Model\JToken]
+     * @return map[string,\LUSHDigital\NShiftPHP\Model\JToken]
      */
     public function getConfiguration()
     {
@@ -269,7 +269,7 @@ class RequestBody implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param map[string,\Swagger\Client\Model\JToken] $configuration configuration
+     * @param map[string,\LUSHDigital\NShiftPHP\Model\JToken] $configuration configuration
      *
      * @return $this
      */
