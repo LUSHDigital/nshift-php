@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace LUSHDigital\NShiftPHP\;
+namespace LUSHDigital\NShiftPHP\ShipServer;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

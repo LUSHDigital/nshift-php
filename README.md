@@ -64,7 +64,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -94,7 +94,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -140,7 +140,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -163,7 +163,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -209,7 +209,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -279,7 +279,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -302,7 +302,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -325,7 +325,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -348,7 +348,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -371,7 +371,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -394,7 +394,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -417,7 +417,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -439,7 +439,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -462,7 +462,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -484,7 +484,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -507,7 +507,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -530,7 +530,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -553,7 +553,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -576,7 +576,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -599,7 +599,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -622,7 +622,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -645,7 +645,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -669,7 +669,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -693,7 +693,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -716,7 +716,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -739,7 +739,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -762,7 +762,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -787,7 +787,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -812,7 +812,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -836,7 +836,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -861,7 +861,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -884,7 +884,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -907,7 +907,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -929,7 +929,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -952,7 +952,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -975,7 +975,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -998,7 +998,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1022,7 +1022,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1046,7 +1046,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1069,7 +1069,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1092,7 +1092,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1115,7 +1115,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1138,7 +1138,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1161,7 +1161,7 @@ $config = LUSHDigital\NShiftPHP\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 
-$apiInstance = new LUSHDigital\NShiftPHP\\ShipServerApi(
+$apiInstance = new LUSHDigital\NShiftPHP\ShipServer\ShipServerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
